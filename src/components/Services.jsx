@@ -1,4 +1,3 @@
-// ServicesSection.jsx
 import React from "react";
 
 const services = [
@@ -36,18 +35,16 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="w-full px-6 md:px-16 lg:px-32"> 
+    <section className="w-full px-6 md:px-16 lg:px-32 text-left">
       {services.map((item, index) => (
         <div
           key={item.title}
-          className={`flex gap-6 pb-6 items-start ${
-            index !== services.length - 1
-              ? "mb-6 border-b border-gray-300"
-              : ""
+          className={`flex gap-4 md:gap-6 pb-6 justify-start items-start ${
+            index !== services.length - 1 ? "mb-6 border-b border-gray-300" : ""
           }`}
         >
-          {/* Circle Image */}
-          <div className="flex-shrink-0">
+          {/* Icon */}
+          <div className="flex-shrink-0 self-start">
             <img
               src={item.icon}
               alt={item.title}
@@ -55,12 +52,12 @@ const ServicesSection = () => {
             />
           </div>
 
-          {/* Text Section */}
-          <div>
-            <h3 className="font-semibold text-xl md:text-2xl mb-2 text-left">
+          {/* Text */}
+          <div className="w-full text-left">
+            <h3 className="font-semibold text-lg md:text-2xl mb-2">
               {item.title}
             </h3>
-            <p className="text-base md:text-lg leading-relaxed text-gray-700 text-left">
+            <p className="text-sm md:text-lg leading-relaxed text-gray-700">
               {item.text}
             </p>
           </div>
