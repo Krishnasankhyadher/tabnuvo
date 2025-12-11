@@ -4,6 +4,7 @@ import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
 import Contact from "../components/Contact";
 import FAQSection from '../components/Faq';
+import Navbar from '../components/Navbar';
 const smmFaqs = [
   {
     question: "Does social media marketing work?",
@@ -75,6 +76,7 @@ const items = [
 const Seo = () => {
   return (
     <div>
+      <Navbar/>
        <Hero
         bgImage="/assets/contact.png"
         overlayImage="/assets/seo.png"

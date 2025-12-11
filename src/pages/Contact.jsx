@@ -1,8 +1,65 @@
+// src/pages/Contact.jsx  (replace your current file with this)
+import React, { useState } from "react";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
 
-import React from "react";
-import Hero from '../components/Hero';
+// <-- Change this to your backend URL when deploying -->
+const API_BASE = "http://localhost:3000";
 
 const ContactSection = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [comment, setComment] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(null); // { type: 'success'|'error', text: '' }
+
+  const validate = () => {
+    if (!name.trim() || !email.trim() || !comment.trim()) {
+      setMessage({ type: "error", text: "All fields are required." });
+      return false;
+    }
+    // simple email check
+    const re = /\S+@\S+\.\S+/;
+    if (!re.test(email)) {
+      setMessage({ type: "error", text: "Please enter a valid email." });
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setMessage(null);
+    if (!validate()) return;
+
+    setLoading(true);
+    try {
+      const res = await fetch(`${API_BASE}/api/enquiries`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, comment }),
+      });
+
+      // try to read JSON (server returns JSON on success or error)
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        const errMsg = (data && data.message) || `Server error: ${res.status}`;
+        setMessage({ type: "error", text: errMsg });
+      } else {
+        setMessage({ type: "success", text: (data && data.message) || "Enquiry sent!" });
+        setName("");
+        setEmail("");
+        setComment("");
+      }
+    } catch (err) {
+      console.error("Submit failed:", err);
+      setMessage({ type: "error", text: "Network or server error. Check console." });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="w-full px-6 md:px-16 lg:px-32 py-12 bg-white">
       <div className="flex flex-col md:flex-row gap-10 md:gap-16">
@@ -35,18 +92,24 @@ const ContactSection = () => {
           </h3>
 
           <div className="bg-[#d7e6dc] rounded-md p-6 md:p-7 shadow-sm">
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 type="text"
-                placeholder="First Name"
+                placeholder="Full Name"
                 className="w-full text-sm md:text-base px-3 py-2 border border-gray-400 rounded-sm bg-white focus:outline-none focus:ring-1 focus:ring-gray-500"
               />
               <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 placeholder="Email"
                 className="w-full text-sm md:text-base px-3 py-2 border border-gray-400 rounded-sm bg-white focus:outline-none focus:ring-1 focus:ring-gray-500"
               />
               <textarea
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
                 rows="4"
                 placeholder="Comment"
                 className="w-full text-sm md:text-base px-3 py-2 border border-gray-400 rounded-sm bg-white resize-none focus:outline-none focus:ring-1 focus:ring-gray-500"
@@ -54,10 +117,19 @@ const ContactSection = () => {
 
               <button
                 type="submit"
-                className="w-full mt-2 py-2 md:py-2.5 text-sm md:text-base font-semibold bg-green-800 text-white rounded-sm hover:bg-green-900 transition"
+                disabled={loading}
+                className="w-full mt-2 py-2 md:py-2.5 text-sm md:text-base font-semibold bg-green-800 text-white rounded-sm hover:bg-green-900 transition disabled:opacity-60"
               >
-                Send
+                {loading ? "Sending..." : "Send"}
               </button>
+
+              {message && (
+                <div
+                  className={`text-sm mt-2 ${message.type === "success" ? "text-green-700" : "text-red-700"}`}
+                >
+                  {message.text}
+                </div>
+              )}
             </form>
           </div>
         </div>
@@ -65,16 +137,14 @@ const ContactSection = () => {
     </section>
   );
 };
+
 const Hero1 = ({ bgImage, text }) => {
   return (
     <div
       className="w-full h-[300px] md:h-[400px] flex justify-center items-center bg-cover bg-center relative mb-15 "
       style={{ backgroundImage: `url(${'/assets/back.jpg'})` }}
     >
-      {/* Overlay (optional if you want slight dim) */}
       <div className="absolute inset-0 bg-black/20"></div>
-
-      {/* Text */}
       <h1 className="relative text-black text-2xl md:text-4xl font-bold text-center">
         {"START YOUR CAREER WITH Tabnuvo"}
       </h1>
@@ -82,21 +152,15 @@ const Hero1 = ({ bgImage, text }) => {
   );
 };
 
-
-
-
 const Contact = () => {
   return (
     <div>
-        <Hero
-         bgImage="/assets/contact.png"
-         overlayImage="/assets/get.png"/>
-        <ContactSection/>
-        <Hero1/>
-        
-      
+      <Navbar />
+      <Hero bgImage="/assets/contact.png" overlayImage="/assets/get.png" />
+      <ContactSection />
+      <Hero1 />
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import FAQSection from "../components/Faq";
-
+import Navbar from '../components/Navbar.jsx';
 const serviceList = [
   {
     title: "Brand & Experience",
@@ -137,6 +137,7 @@ const ServicesSection = () => {
 const Services = () => {
   return (
     <div>
+      <Navbar/>
       <Hero bgImage="/assets/contact.png" overlayImage="/assets/services.png" />
       <ServicesSection />
       <FAQSection />

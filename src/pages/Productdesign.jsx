@@ -4,6 +4,7 @@ import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
 import Contact from "../components/Contact";
 import FAQSection from '../components/Faq';
+import Navbar from '../components/Navbar';
 
 const smmFaqs = [
   {
@@ -76,6 +77,7 @@ const items = [
 const Productdesign = () => {
   return (
     <div>
+      <Navbar/>
         <Hero
                 bgImage="/assets/contact.png"
                 overlayImage="/assets/product.png"

@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero.jsx'
 import ServicesSection from '../components/Services.jsx';
 import TeamSection from '../components/Team.jsx';
+import Navbar from '../components/Navbar.jsx';
 const aboutImages = [
     "/assets/about-1.jpg",
     "/assets/about-2.jpg",
@@ -109,6 +110,7 @@ const About = () => {
     return (
         <div className="min-h-screen bg-white text-gray-900">
             <main>
+                <Navbar/>
                 <Hero
                     bgImage="/assets/contact.png"
                     overlayImage="/assets/about.png"

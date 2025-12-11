@@ -20,12 +20,21 @@ import Ecommerce from './pages/Ecommerce'
 import Content from './pages/Content'
 import Paidads from './pages/Paidads'
 import Bussiness from './pages/Bussiness'
+import BlogsPage from './pages/Blogs'
+import BlogDetailPage from './pages/Blogdetails'
+import AdminPage from './pages/admin/Adminpage'
+import AdminDashboard from './pages/admin/Admindashboard'
+import blog from './pages/admin/Addblog'
+import AdminEnquiries from './pages/admin/Adminenquiries'
+import Enquiries from './pages/admin/Enquiry'
+import AdminSeo from './pages/admin/Adminseo'
+import BlogEditor from './pages/admin/Addblog'
 
 
 const App = () => {
   return (
     <div>
-    <Navbar/>
+    
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/about" element={<About/>}></Route>
@@ -36,6 +45,14 @@ const App = () => {
         <Route path="/ui-ux-design" element={<UIux/>}></Route>
         <Route path="/product-design" element={<Productdesign/>}></Route>
         <Route path="/branding" element={<Branding/>}></Route>
+        <Route path="/blogs" element={<BlogsPage/>}></Route>
+        <Route path="/admin" element={<AdminPage/>}></Route>
+        <Route path="/admin/dashboard" element={<AdminDashboard/>}></Route>
+        <Route path="/admin/dashboard/blogs" element={<BlogEditor/>}></Route>
+        <Route path="/admin/dashboard/newsletter" element={<AdminEnquiries/>}></Route>
+        <Route path="/admin/dashboard/enquiries" element={<Enquiries/>}></Route>
+        <Route path="/admin/dashboard/static-seo" element={<AdminSeo/>}></Route>
+        <Route path="/blog/:id" element={<BlogDetailPage/>}></Route>
         <Route path="/paid-ads" element={<Paidads/>}></Route>
         <Route path="/business-consulting" element={<Bussiness/>}></Route>
         <Route path="/ecommerce-management" element={<Ecommerce/>}></Route>

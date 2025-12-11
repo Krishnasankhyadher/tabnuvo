@@ -1,0 +1,17 @@
+[33mcommit 98cadea095dd46206289aa856acdaf41ab883fd9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Krishnasankhyadher <krishnasankhyadher@gmail.com>
+Date:   Tue Dec 9 16:19:30 2025 +0530
+
+    added footer icons + updated mobile UI and components
+
+[33mcommit 3ad2957b7996b5085d8d8b3b6fceda26b4fc6397[m
+Author: Krishnasankhyadher <krishnasankhyadher@gmail.com>
+Date:   Sun Dec 7 22:02:38 2025 +0530
+
+    Add SPA rewrite config for routing
+
+[33mcommit 74bd719c37720758653cf13a1dce02540ec44870[m
+Author: Krishnasankhyadher <krishnasankhyadher@gmail.com>
+Date:   Sun Dec 7 21:45:52 2025 +0530
+
+    initial commit
