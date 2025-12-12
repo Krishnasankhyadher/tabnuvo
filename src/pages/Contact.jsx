@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 
 // <-- Change this to your backend URL when deploying -->
-const API_BASE = "http://localhost:3000";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 const ContactSection = () => {
   const [name, setName] = useState("");

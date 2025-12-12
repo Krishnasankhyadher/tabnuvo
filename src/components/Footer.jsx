@@ -1,7 +1,6 @@
 // src/components/Footer.jsx
 import React, { useState } from "react";
-
-const API_BASE = "http://localhost:3000"; // change to your backend URL in production
+const API_BASE = import.meta.env.VITE_API_URL; // change to your backend URL in production
 
 export default function Footer() {
   const [email, setEmail] = useState("");
