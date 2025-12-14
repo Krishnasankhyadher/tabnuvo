@@ -2,10 +2,11 @@ import React,{useState} from "react";
 import Hero from "../components/Hero"; // existing component
 import {  Plus, X } from 'lucide-react';
 import Contact from "../components/Contact";
-import { blog_data } from "../../public/as1";
-import Blogcard from "../components/Blogcard";
+
+
 import BlogsSection from "../components/Blogsection";
 import Navbar from "../components/Navbar";
+
 // if these are in public/assets -> keep as is
 const aboutImages = [
   "/assets/about-1.jpg",
@@ -319,7 +320,7 @@ export default function Home() {
         <WorkSection />
         <ServicesSection />
         <Contact />
-         <BlogsSection blogs={blog_data} />
+         <BlogsSection/>
       </main>
     </div>
   );

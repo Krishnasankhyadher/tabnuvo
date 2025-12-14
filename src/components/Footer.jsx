@@ -4,15 +4,17 @@ const API_BASE = import.meta.env.VITE_API_URL; // change to your backend URL in 
 
 export default function Footer() {
   const [email, setEmail] = useState("");
-  const [query, setQuery] = useState("");
+  const [name, setName] = useState("");
+
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null); // { type: 'success' | 'error', text: string }
 
   const validate = () => {
-    if (!email.trim() || !query.trim()) {
-      setMessage({ type: "error", text: "Both fields are required." });
-      return false;
-    }
+   if (!email.trim() || !name.trim()) {
+  setMessage({ type: "error", text: "Name and email are required." });
+  return false;
+}
+
     const re = /\S+@\S+\.\S+/;
     if (!re.test(email)) {
       setMessage({ type: "error", text: "Please enter a valid email." });
@@ -28,10 +30,10 @@ export default function Footer() {
 
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/api/enquiry`, {
+      const res = await fetch(`${API_BASE}/api/newsletter`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: "", email, comment: query }),
+        body: JSON.stringify({ name, email, }),
       });
 
       const data = await res.json().catch(() => null);
@@ -41,7 +43,7 @@ export default function Footer() {
       } else {
         setMessage({ type: "success", text: (data && data.message) || "Submitted successfully!" });
         setEmail("");
-        setQuery("");
+        
       }
     } catch (err) {
       console.error("Submit error:", err);
@@ -157,10 +159,10 @@ export default function Footer() {
               />
 
               <input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 type="text"
-                placeholder="Query"
+                placeholder="Name"
                 className="w-full border border-gray-400 rounded-md px-3 py-2 text-[14px] bg-white outline-none focus:border-gray-700"
               />
 

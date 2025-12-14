@@ -29,12 +29,18 @@ import AdminEnquiries from './pages/admin/Adminenquiries'
 import Enquiries from './pages/admin/Enquiry'
 import AdminSeo from './pages/admin/Adminseo'
 import BlogEditor from './pages/admin/Addblog'
+import BlogsList from './pages/admin/BlogList'
+import Blogs from './pages/Blogs'
+import Blogdetails from './pages/Blogdetails'
+import { Scroll } from 'lucide-react'
+import ScrollToTop from './components/Scrolltotop'
+
 
 
 const App = () => {
   return (
     <div>
-    
+    <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/about" element={<About/>}></Route>
@@ -45,10 +51,14 @@ const App = () => {
         <Route path="/ui-ux-design" element={<UIux/>}></Route>
         <Route path="/product-design" element={<Productdesign/>}></Route>
         <Route path="/branding" element={<Branding/>}></Route>
-        <Route path="/blogs" element={<BlogsPage/>}></Route>
+        <Route path="/blogs" element={<Blogs/>}></Route>
+        <Route path="/blogs/:id" element={<Blogdetails/>}></Route>
+        
         <Route path="/admin" element={<AdminPage/>}></Route>
         <Route path="/admin/dashboard" element={<AdminDashboard/>}></Route>
-        <Route path="/admin/dashboard/blogs" element={<BlogEditor/>}></Route>
+        <Route path="/admin/dashboard/blogs/create" element={<BlogEditor/>}></Route>
+        <Route path="/admin/dashboard/blogs/read" element={<BlogsList/>}></Route>
+        <Route path="/admin/dashboard/blogs/edit/:id" element={<BlogEditor/>}></Route>
         <Route path="/admin/dashboard/newsletter" element={<AdminEnquiries/>}></Route>
         <Route path="/admin/dashboard/enquiries" element={<Enquiries/>}></Route>
         <Route path="/admin/dashboard/static-seo" element={<AdminSeo/>}></Route>
