@@ -1,17 +1,22 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import GallerySection from '../components/Works'
-import Navbar from '../components/Navbar'
+ // Make sure path is correct
 
 const Work = () => {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
       <Navbar />
-        <Hero
-        bgImage="/assets/contact.png"
-        overlayImage="/assets/work.png"/>
-        <GallerySection/>
       
+      {/* Reusing the Hero component */}
+      <Hero
+        bgImage="/assets/contact.png"
+        overlayImage="/assets/work.png"
+      />
+      
+      {/* The new Grid Section */}
+      <GallerySection />
       
     </div>
   )

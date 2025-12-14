@@ -59,7 +59,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16">
           {/* LOGO + TEXT */}
           <div>
-            <img src="/assets/main.png" alt="logo" className="h-16 w-auto mb-4" />
+            <img src="/assets/main.png" alt="logo" className="h-13 w-auto mb-4" />
 
             <p className="text-gray-800 text-[15px] leading-relaxed max-w-xs">
               Creating standout digital strategies to boost your brand and business success.

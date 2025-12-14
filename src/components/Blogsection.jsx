@@ -1,7 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
+/* ================= ANIMATION VARIANTS ================= */
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
 
 /* ================= BLOG ROW CARD ================= */
 const BlogRowCard = ({ blog }) => {
@@ -11,33 +28,87 @@ const BlogRowCard = ({ blog }) => {
   const { _id, title, mainImage } = blog;
 
   return (
-    <div
+    <motion.div
+      variants={fadeInUp}
+      initial="rest"
+      whileHover="hover"
       onClick={() => navigate(`/blog/${_id}`)}
-      className="w-full rounded-lg border border-gray-200 overflow-hidden bg-white cursor-pointer
-                 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+      className="w-full rounded-lg border border-gray-200 overflow-hidden bg-white cursor-pointer shadow-sm relative"
     >
-      <div className="flex flex-col md:flex-row items-stretch">
+      <motion.div 
+        className="flex flex-col md:flex-row items-stretch"
+        variants={{
+          rest: { y: 0 },
+          hover: { y: -4 }
+        }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
 
         {/* IMAGE */}
-        <div className="w-full md:w-78 lg:w-100 h-40 sm:h-44 md:h-40 lg:h-48 overflow-hidden order-1 md:order-2">
+        <div className="w-full md:w-78 lg:w-100 h-40 sm:h-44 md:h-40 lg:h-48 overflow-hidden order-1 md:order-2 relative">
           {mainImage?.url && (
-            <img
-              src={mainImage.url}
-              alt={title}
-              className="w-full h-full object-cover"
-            />
+            <>
+              <motion.img
+                variants={{
+                  rest: { scale: 1 },
+                  hover: { scale: 1.08 }
+                }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                src={mainImage.url}
+                alt={title}
+                className="w-full h-full object-cover"
+              />
+              {/* Overlay on hover */}
+              <motion.div
+                variants={{
+                  rest: { opacity: 0 },
+                  hover: { opacity: 0.1 }
+                }}
+                transition={{ duration: 0.3 }}
+                className="absolute inset-0 bg-[#2f6c5f]"
+              />
+            </>
           )}
+          
+          {/* Arrow button appears on hover */}
+          <motion.div
+            variants={{
+              rest: { opacity: 0, scale: 0.8, rotate: 0 },
+              hover: { opacity: 1, scale: 1, rotate: 45 }
+            }}
+            transition={{ duration: 0.3 }}
+            className="absolute right-4 top-4 h-10 w-10 rounded-full bg-[#2f6c5f] flex items-center justify-center shadow-lg z-10"
+          >
+            <span className="text-white text-lg">↗</span>
+          </motion.div>
         </div>
 
         {/* TEXT */}
         <div className="flex-1 px-4 py-3 md:px-6 md:py-6 flex items-center order-2 md:order-1">
-          <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 leading-snug">
+          <motion.h3 
+            variants={{
+              rest: { color: "#111827" },
+              hover: { color: "#2f6c5f" }
+            }}
+            transition={{ duration: 0.3 }}
+            className="text-base sm:text-lg md:text-xl font-semibold leading-snug"
+          >
             {title}
-          </h3>
+          </motion.h3>
         </div>
 
-      </div>
-    </div>
+      </motion.div>
+
+      {/* Enhanced shadow on hover */}
+      <motion.div
+        variants={{
+          rest: { boxShadow: "0 1px 3px 0 rgb(0 0 0 / 0.1)" },
+          hover: { boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }
+        }}
+        transition={{ duration: 0.3 }}
+        className="absolute inset-0 rounded-lg pointer-events-none"
+      />
+    </motion.div>
   );
 };
 
@@ -66,7 +137,13 @@ const BlogsSection = () => {
   if (loading) {
     return (
       <section className="py-16 text-center text-gray-500">
-        Loading blogs...
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Loading blogs...
+        </motion.div>
       </section>
     );
   }
@@ -86,31 +163,51 @@ const BlogsSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Heading */}
-        <div className="mb-6">
-          <p className="text-xs sm:text-sm font-semibold text-[#2f6c5f]">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="mb-6"
+        >
+          <p className="text-lg sm:text-3xl font-bold text-[#2f6c5f] mb-2">
             Blogs
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-[#111827]">
-            IPSUM <br /> GENERATORS
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
+            <span className="block">IPSUM</span>
+            GENERATORS
           </h2>
-        </div>
+        </motion.div>
 
-        {/* Blog list */}
-        <div className="space-y-4">
+        {/* Blog list with stagger animation */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={staggerContainer}
+          className="space-y-4"
+        >
           {topBlogs.map(blog => (
             <BlogRowCard key={blog._id} blog={blog} />
           ))}
-        </div>
+        </motion.div>
 
-        {/* View all */}
-        <div className="mt-6 flex justify-center">
+        {/* View all button */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mt-12 text-center"
+        >
           <button
             onClick={() => navigate("/blogs")}
-            className="text-sm sm:text-base font-semibold hover:underline"
+            className="text-lg md:text-xl font-semibold relative group"
           >
             View all
+            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
           </button>
-        </div>
+        </motion.div>
 
       </div>
     </section>

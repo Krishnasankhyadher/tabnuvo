@@ -32,8 +32,10 @@ import BlogEditor from './pages/admin/Addblog'
 import BlogsList from './pages/admin/BlogList'
 import Blogs from './pages/Blogs'
 import Blogdetails from './pages/Blogdetails'
-import { Scroll } from 'lucide-react'
+
 import ScrollToTop from './components/Scrolltotop'
+import WorkDetailPage from './pages/WorkDetailpage'
+
 
 
 
@@ -71,6 +73,8 @@ const App = () => {
         <Route path="/Service-design" element={<Servicedesign/>}></Route>
         <Route path="/website-development" element={<WebsiteDesign  />}></Route>
         <Route path="/work" element={<Work></Work>}></Route>
+        <Route path="/work/divine-bite-ai" element={<WorkDetailPage></WorkDetailPage>}></Route>
+   
       </Routes>
       <Footer/>
 

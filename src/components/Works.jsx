@@ -1,84 +1,105 @@
-// GallerySection.jsx
 import React from "react";
+import { Link } from "react-router-dom"; // For navigation
+import { ArrowRight, Calendar } from "lucide-react";
 
-const cards = [
+// Static Data for your Work/Projects
+const projects = [
   {
-    type: "title",
-    label: "DIVINE BITE",
+    id: "divine-bite-ai",
+    title: "Divine Bite AI Chip",
+    category: "Technology",
     year: "2022",
-  },
-  {
-    type: "image",
     img: "/assets/ai.jpg",
-    alt: "AI chip",
-    label: "DIVINE BITE",
-    year: "2022",
+    description: "An advanced AI chip architecture designed for next-gen processing.",
   },
   {
-    type: "image",
+    id: "divine-bite-robot",
+    title: "Autonomous Robot",
+    category: "Robotics",
+    year: "2022",
     img: "/assets/robot.jpg",
-    alt: "Robot",
-    label: "DIVINE BITE",
-    year: "2022",
+    description: "Self-learning robotics system for automated manufacturing.",
   },
   {
-    type: "image",
+    id: "nature-waterfall",
+    title: "Fluid Dynamics",
+    category: "Simulation",
+    year: "2023",
     img: "/assets/waterfall.jpg",
-    alt: "Waterfall",
-    label: "DIVINE BITE",
-    year: "2022",
+    description: "Real-time water physics simulation using particle systems.",
   },
   {
-    type: "image",
+    id: "space-nebula",
+    title: "Nebula Explorer",
+    category: "VR Experience",
+    year: "2023",
     img: "/assets/space-nebula.jpg",
-    alt: "Nebula",
-    label: "DIVINE BITE",
-    year: "2022",
+    description: "Virtual reality journey through deep space nebulas.",
   },
   {
-    type: "image",
+    id: "astronaut-suit",
+    title: "Mars Suit Design",
+    category: "Design",
+    year: "2024",
     img: "/assets/Astronaut.jpg",
-    alt: "Astronaut",
-    label: "DIVINE BITE",
-    year: "2022",
+    description: "Ergonomic and life-support integrated suit design for Mars colonization.",
   },
 ];
 
 const GallerySection = () => {
   return (
-    <section className="w-full px-6 md:px-16 lg:px-32 py-10">
-      <div className="grid grid-cols-2 gap-4">
-        {cards.map((card, index) => (
-          <div key={index} className="flex flex-col gap-1">
-            {/* Top: image / title card */}
-            {card.type === "title" ? (
-              <div className="rounded-2xl overflow-hidden bg-emerald-900  flex items-center justify-center h-40 md:h-62">
-                <div className="text-center text-white">
-                  <p className="text-xl md:text-2xl font-bold tracking-wide">
-                    IPSUM
-                  </p>
-                  <p className="text-xl md:text-2xl font-bold tracking-wide">
-                    GENERATORS
-                  </p>
-                </div>
+    <section className="max-w-7xl mx-auto px-6 py-16">
+      {/* Grid Layout - Matches Blog Page (1 col mobile, 2 col desktop) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        {projects.map((project) => (
+          <Link
+            key={project.id}
+            to={`/work/${project.id}`} // Navigates to detail page
+            className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+          >
+            {/* Image Container */}
+            <div className="relative h-64 sm:h-72 overflow-hidden bg-gray-100">
+              <img
+                src={project.img}
+                alt={project.title}
+                className="h-full w-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+              />
+              
+              {/* Category Badge (Optional, matches Blog style) */}
+              <div className="absolute top-5 left-5 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#2f6c5f] shadow-sm">
+                {project.category}
               </div>
-            ) : (
-              <div className="rounded-2xl overflow-hidden bg-gray-200 h-40 md:h-62">
-                <img
-                  src={card.img}
-                  alt={card.alt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-
-            {/* Bottom: text strip */}
-            <div className="flex justify-between text-[10px] md:text-xs font-semibold uppercase tracking-[0.15em] mt-1">
-              <span>{card.label}</span>
-              <span>{card.year}</span>
             </div>
-          </div>
+
+            {/* Content Container */}
+            <div className="p-8 flex-1 flex flex-col">
+              {/* Year / Metadata */}
+              <div className="flex items-center gap-2 text-xs font-medium text-gray-500 mb-4">
+                <Calendar size={14} />
+                <span>{project.year}</span>
+              </div>
+
+              {/* Title */}
+              <h2 className="text-2xl font-bold text-gray-900 leading-tight mb-3 group-hover:text-[#2f6c5f] transition-colors">
+                {project.title}
+              </h2>
+
+              {/* Description (Optional - remove if you only want title) */}
+              <p className="text-gray-600 text-sm mb-6 line-clamp-2">
+                {project.description}
+              </p>
+
+              {/* Footer / CTA */}
+              <div className="mt-auto pt-6 border-t border-gray-100">
+                <span className="inline-flex items-center gap-2 text-sm font-bold text-[#2f6c5f] group-hover:gap-3 transition-all">
+                  View Project <ArrowRight size={16} />
+                </span>
+              </div>
+            </div>
+          </Link>
         ))}
+        
       </div>
     </section>
   );
