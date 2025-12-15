@@ -4,6 +4,7 @@ import Hero from '../components/Hero.jsx';
 import ServicesSection from '../components/Services.jsx';
 import TeamSection from '../components/Team.jsx';
 import Navbar from '../components/Navbar.jsx';
+import { motion } from 'framer-motion';
 
 const aboutImages = [
     "/assets/about-1.jpg",
@@ -39,6 +40,13 @@ const Counter = ({ from = 0, to, duration = 1.5 }) => {
 
 function AboutSection() {
     return (
+            <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
         <section id="about" className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
             <div className="grid gap-10 lg:grid-cols-12">
                 {/* BIG IMAGE + HEADING SIDE */}
@@ -56,7 +64,7 @@ function AboutSection() {
                                 src={aboutImages[0]}
                                 alt="about image 1"
                                 className="col-span-1 row-span-2 w-full h-full object-cover rounded-lg shadow-sm"
-                            />
+                                />
                             {/* top-right small */}
                             <img
                                 src={aboutImages[1]}
@@ -135,23 +143,32 @@ function AboutSection() {
                 </div>
             </div>
         </section>
+</motion.div>
     );
 }
 
 const About = () => {
     return (
+            <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
         <div className="min-h-screen bg-white text-gray-900">
             <main>
                 <Navbar />
                 <Hero
                     bgImage="/assets/contact.png"
                     overlayImage="/assets/about.png"
-                />
+                    />
                 <AboutSection />
                 <ServicesSection />
                 <TeamSection />
             </main>
         </div>
+                    </motion.div>
     )
 }
 

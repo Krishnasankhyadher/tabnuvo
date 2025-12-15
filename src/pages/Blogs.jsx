@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import { Calendar, ArrowRight, Image as ImageIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
@@ -26,6 +27,13 @@ const Blogs = () => {
   }, []);
 
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
       <Navbar />
       
@@ -68,23 +76,23 @@ const Blogs = () => {
               const formattedDate = blog.postedDate 
                 ? new Date(blog.postedDate).toLocaleDateString("en-IN", { month: 'short', day: 'numeric', year: 'numeric' })
                 : null;
-
+                
               return (
                 <Link
-                  key={blog._id}
-                  to={`/blog/${blog.url || blog._id}`}
-                  className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                key={blog._id}
+                to={`/blog/${blog.url || blog._id}`}
+                className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                 >
                   {/* Image Container - Taller for 2-col layout */}
                   <div className="relative h-64 sm:h-72 overflow-hidden bg-gray-100">
                     {imageUrl ? (
                       <img
-                        src={imageUrl}
-                        alt={blog.title}
+                      src={imageUrl}
+                      alt={blog.title}
                         className="h-full w-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                      />
-                    ) : (
-                      <div className="h-full w-full flex flex-col items-center justify-center text-gray-400">
+                        />
+                      ) : (
+                        <div className="h-full w-full flex flex-col items-center justify-center text-gray-400">
                         <ImageIcon size={48} className="opacity-20 mb-2" />
                       </div>
                     )}
@@ -122,6 +130,7 @@ const Blogs = () => {
         )}
       </section>
     </div>
+              </motion.div>
   );
 };
 

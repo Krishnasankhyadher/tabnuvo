@@ -5,6 +5,7 @@ import SocialMediaMagic from '../components/Compo'
 import Contact from "../components/Contact";
 import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
+import { motion } from 'framer-motion';
 
 
 
@@ -77,12 +78,19 @@ const items = [
 
 const Content = () => {
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <div>
       <Navbar/>
       <Hero
         bgImage="/assets/contact.png"
         overlayImage="/assets/seo.png"
-      />
+        />
       <PostingSection
       images={[
         "/assets/ise1.jpg",
@@ -97,7 +105,7 @@ At The Ad-ults, we offer a team of seasoned industry professionals who specializ
 <SocialMediaMagic
       sectionTitle="SOCIAL MEDIA MAGIC"
       items={items}
-    />
+      />
     <Contact />
     <FAQSection
         eyebrow="FAQs"
@@ -106,6 +114,7 @@ At The Ad-ults, we offer a team of seasoned industry professionals who specializ
         faqs={smmFaqs}
         />
     </div>
+        </motion.div>
   )
 }
 

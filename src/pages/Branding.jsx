@@ -5,6 +5,7 @@ import SocialMediaMagic from '../components/Compo'
 import Contact from "../components/Contact";
 import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
+import { motion } from 'framer-motion';
 
 const smmFaqs = [
   {
@@ -75,12 +76,19 @@ const items = [
 
 const Branding = () => {
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <div>
       <Navbar/>
           <Hero
                 bgImage="/assets/contact.png"
                 overlayImage="/assets/branding.png"
-              />
+                />
               <PostingSection
       images={[
         "/assets/iw1.jpg",
@@ -90,7 +98,7 @@ const Branding = () => {
       ]}
       heading="BRANDING DESIGN"
       text="In today's era of Social Media prevalence, platforms like Instagram boast approximately 2 billion active mobile users, constituting about 28% of the global population, with its primary user base being young adults aged 18-34. Twitter emerges as one of the most vibrant social media platforms, witnessing active engagement from brands, leaders, and celebrities. Meanwhile, LinkedIn remains unrivaled as the leading professional networking platform.
-However, these observations merely scratch the surface.
+      However, these observations merely scratch the surface.
 In the current landscape, a sporadic post here and there won't suffice to make an impact. It's essential to dig deeper to truly stand out in the modern world of Social Media."/>
 <SocialMediaMagic
       sectionTitle="BRANDING DESIGN"
@@ -105,6 +113,7 @@ In the current landscape, a sporadic post here and there won't suffice to make a
       />
       
     </div>
+        </motion.div>
   )
 }
 

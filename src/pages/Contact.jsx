@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
 
 const API_BASE = import.meta.env.VITE_API_URL;
 
@@ -66,6 +67,13 @@ const ContactSection = () => {
   };
 
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <section className="w-full px-4 sm:px-6 md:px-16 lg:px-32 py-12 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16">
 
@@ -100,7 +108,7 @@ const ContactSection = () => {
                 type="tel"
                 placeholder="Phone Number"
                 className="w-full px-3 py-2 border border-gray-400 bg-white text-sm md:text-base"
-              />
+                />
 
               <textarea
                 value={comment}
@@ -114,7 +122,7 @@ const ContactSection = () => {
                 type="submit"
                 disabled={loading}
                 className="w-full py-2 font-semibold bg-green-800 text-white hover:bg-green-900 transition disabled:opacity-60"
-              >
+                >
                 {loading ? "Sending..." : "Send"}
               </button>
 
@@ -124,7 +132,7 @@ const ContactSection = () => {
                     message.type === "success"
                       ? "text-green-700"
                       : "text-red-700"
-                  }`}
+                    }`}
                 >
                   {message.text}
                 </p>
@@ -162,14 +170,15 @@ const ContactSection = () => {
 
       </div>
     </section>
+</motion.div>
   );
 };
 
 const HeroBottom = () => {
   return (
     <div
-      className="w-full h-[260px] md:h-[380px] flex items-center justify-center bg-cover bg-center relative"
-      style={{ backgroundImage: `url('/assets/back.jpg')` }}
+    className="w-full h-[260px] md:h-[380px] flex items-center justify-center bg-cover bg-center relative"
+    style={{ backgroundImage: `url('/assets/back.jpg')` }}
     >
       <div className="absolute inset-0 bg-black/20" />
       <h1 className="relative text-black text-2xl md:text-4xl font-bold text-center px-4">

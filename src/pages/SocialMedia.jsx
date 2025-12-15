@@ -5,6 +5,7 @@ import SocialMediaMagic from '../components/Compo'
 import Contact from "../components/Contact";
 import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
+import { motion } from 'framer-motion';
 
 
 const smmFaqs = [
@@ -76,6 +77,13 @@ const items = [
 
 const SocialMedia = () => {
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <div>
       <Navbar/>
       <Hero
@@ -106,6 +114,7 @@ In the current landscape, a sporadic post here and there won't suffice to make a
       />
 
     </div>
+    </motion.div>
   )
 }
 

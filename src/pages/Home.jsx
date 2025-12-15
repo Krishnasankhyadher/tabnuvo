@@ -6,6 +6,7 @@ import Contact from "../components/Contact";
 import BlogsSection from "../components/Blogsection";
 import Navbar from "../components/Navbar";
 
+
 // --- ASSETS & DATA ---
 const aboutImages = [
   "/assets/about-1.jpg",
@@ -72,6 +73,13 @@ const scaleOnHover = {
 
 function AboutSection() {
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <section id="about" className="max-w-7xl mx-auto px-6 py-16 lg:py-24 overflow-hidden">
       <div className="grid gap-10 lg:grid-cols-12">
         
@@ -150,6 +158,7 @@ function AboutSection() {
         </motion.div>
       </div>
     </section>
+  </motion.div>
   );
 }
 
@@ -165,9 +174,9 @@ function WorkCard({ item, align }) {
   
   const isWide = item.variant === "wide";
   const justifyClass = isWide 
-    ? "justify-center" 
-    : (align === "right" ? "justify-end" : "justify-start");
-
+  ? "justify-center" 
+  : (align === "right" ? "justify-end" : "justify-start");
+  
   const handleClick = () => {
     window.location.href = '/work';
   };
@@ -180,7 +189,7 @@ function WorkCard({ item, align }) {
         variants={scaleOnHover}
         onClick={handleClick}
         className={`relative overflow-hidden rounded-xl bg-white flex-1 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer ${isWide ? "max-w-full" : "max-w-sm md:max-w-md"} w-full`}
-      >
+        >
         <div className={`${heightMap[item.variant]} w-full overflow-hidden`}>
           <motion.img
             variants={{
@@ -375,13 +384,20 @@ function ServicesSection() {
 
 export default function Home() {
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
       <main>
         <Navbar/>
         <Hero
           bgImage="/assets/contact.png"
           overlayImage="/assets/text-1.png"
-        />
+          />
         <AboutSection />
         <WorkSection />
         <ServicesSection />
@@ -389,5 +405,6 @@ export default function Home() {
         <BlogsSection/>
       </main>
     </div>
+          </motion.div>
   );
 }

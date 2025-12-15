@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
 
-
+import { motion } from 'framer-motion';
 
 const smmFaqs = [
   {
@@ -76,12 +76,19 @@ const items = [
 ];
 const Softwaredevlopment = () => {
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <div>
       <Navbar />
          <Hero
         bgImage="/assets/contact.png"
         overlayImage="/assets/seo.png"
-      />
+        />
       <PostingSection
       images={[
         "/assets/ise1.jpg",
@@ -90,9 +97,9 @@ const Softwaredevlopment = () => {
         "/assets/ise4.jpg",
       ]}
       heading="Search Engine
-Optimization  Services"
+      Optimization  Services"
       text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
-At The Ad-ults, we offer a team of seasoned industry professionals who specialize in guiding our clients towards the top spot strategically. From devising content strategies to building high-quality backlinks, our SEO experts demonstrate unparalleled proficiency in both On-page and Off-page SEO techniques."/>
+      At The Ad-ults, we offer a team of seasoned industry professionals who specialize in guiding our clients towards the top spot strategically. From devising content strategies to building high-quality backlinks, our SEO experts demonstrate unparalleled proficiency in both On-page and Off-page SEO techniques."/>
 <SocialMediaMagic
       sectionTitle="SOCIAL MEDIA MAGIC"
       items={items}
@@ -103,9 +110,10 @@ At The Ad-ults, we offer a team of seasoned industry professionals who specializ
         title="Social Media"
         titleSecondLine="Marketing FAQs"
         faqs={smmFaqs}
-      />
+        />
       
     </div>
+        </motion.div>
   )
 }
 

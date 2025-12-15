@@ -10,8 +10,10 @@ import {
   Zap,
   Layers
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const WorkDetailPage = () => {
+  
   // --- SINGLE SOURCE OF TRUTH (Hardcoded Data) ---
   const project = {
     title: "Divine Bite AI Chip",
@@ -30,6 +32,12 @@ const WorkDetailPage = () => {
   };
 
   return (
+     <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-orange-100">
       <Navbar />
 
@@ -197,6 +205,7 @@ const WorkDetailPage = () => {
       </div>
 
     </div>
+       </motion.div>
   );
 };
 

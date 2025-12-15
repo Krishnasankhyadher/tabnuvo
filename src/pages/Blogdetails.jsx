@@ -9,6 +9,7 @@ import {
   Share2, 
   User 
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
@@ -17,7 +18,7 @@ const BlogDetailPage = () => {
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-
+  
   useEffect(() => {
     const fetchBlog = async () => {
       try {
@@ -35,13 +36,16 @@ const BlogDetailPage = () => {
     };
     fetchBlog();
   }, [id]);
-
+  
   // --- LOADING SKELETON (WIDER) ---
   if (loading) {
     return (
+    
+
       <div className="min-h-screen bg-white">
         <Navbar />
         {/* Changed max-w-3xl to max-w-6xl here too */}
+   
         <div className="max-w-6xl mx-auto px-6 py-12 animate-pulse">
           <div className="h-4 w-24 bg-gray-200 rounded mb-6"></div>
           <div className="h-10 w-3/4 bg-gray-200 rounded mb-4"></div>
@@ -92,6 +96,13 @@ const BlogDetailPage = () => {
   : "Date unavailable";
   
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <div className="min-h-screen bg-white font-sans text-gray-900">
       <Navbar />
       <Hero bgImage="/assets/contact.png" overlayImage="/assets/blg.png" />
@@ -148,19 +159,19 @@ const BlogDetailPage = () => {
         <div className="max-w-none mx-auto">
           <div
             className="
-              prose prose-lg prose-slate max-w-none 
-              text-lg leading-relaxed text-gray-800
-              [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-10 [&>h2]:mb-6
-              [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mt-8 [&>h3]:mb-4
+            prose prose-lg prose-slate max-w-none 
+            text-lg leading-relaxed text-gray-800
+            [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-10 [&>h2]:mb-6
+            [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mt-8 [&>h3]:mb-4
               [&>p]:mb-6 [&>p]:leading-8
               [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-6
               [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-6
               [&>blockquote]:border-l-4 [&>blockquote]:border-[#2f6c5f] [&>blockquote]:pl-6 [&>blockquote]:italic [&>blockquote]:text-xl [&>blockquote]:text-gray-600 [&>blockquote]:my-8
               [&>img]:rounded-xl [&>img]:shadow-md [&>img]:my-8 [&>img]:w-full
               [&>a]:text-[#2f6c5f] [&>a]:underline hover:[&>a]:text-[#24544a]
-            "
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+              "
+              dangerouslySetInnerHTML={{ __html: content }}
+              />
         </div>
 
         {/* FOOTER */}
@@ -186,13 +197,14 @@ const BlogDetailPage = () => {
         <Link 
           to="/blogs" 
           className="inline-flex items-center gap-2 text-lg font-medium text-gray-500 hover:text-[#2f6c5f] transition-colors mb-8 group"
-        >
+          >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
           Back to all posts
         </Link>
 
       </article>
     </div>
+                  </motion.div>
   );
 };
 

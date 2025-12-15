@@ -5,6 +5,7 @@ import SocialMediaMagic from '../components/Compo'
 import Contact from "../components/Contact";
 import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
+import { motion } from 'framer-motion';
 
 const smmFaqs = [
   {
@@ -76,12 +77,19 @@ const items = [
 
 const WebsiteDesign = () => {
   return (
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
+
     <div>
       <Navbar/>
          <Hero
                 bgImage="/assets/contact.png"
                 overlayImage="/assets/wst.png"
-              />
+                />
               <PostingSection
       images={[
         "/assets/iw1.jpg",
@@ -90,13 +98,13 @@ const WebsiteDesign = () => {
         "/assets/iw4.jpg",
       ]}
       heading="Best Web Designing and
-Development Services"
+      Development Services"
       text="In the Modern era of Digitalisation, your web address is more important for your business than your physical address. Your business is analyzed, judged, and valued by your clients as well as your potential investors based on your website. Whether you work in B2B, B2C, or D2C. Your website can make or break your impression.
-Every website/app is judged on 2 parameters, how it looks and how it works. At The Ad-ults we believe in just 1 philosophy, “Your visitors should get what they are looking for within 2 minutes of pressing enter on your web address”. With 15+ years of experience in UI/UX and Development, our team is capable of making eye-."/>
+      Every website/app is judged on 2 parameters, how it looks and how it works. At The Ad-ults we believe in just 1 philosophy, “Your visitors should get what they are looking for within 2 minutes of pressing enter on your web address”. With 15+ years of experience in UI/UX and Development, our team is capable of making eye-."/>
 <SocialMediaMagic
       sectionTitle="Web Designing Services at TABNUVO PVT. LTD."
       items={items}
-    />
+      />
     <Contact />
       <FAQSection
         eyebrow="FAQs"
@@ -106,6 +114,7 @@ Every website/app is judged on 2 parameters, how it looks and how it works. At T
       />
       
     </div>
+        </motion.div>
   )
 }
 

@@ -39,7 +39,7 @@ export default function Navbar() {
             <img
               src="/assets/main.png"
               alt="Logo"
-              className="h-12 w-auto object-contain"
+              className="h-11 w-auto object-contain ml-3.5"
             />
           </a>
 

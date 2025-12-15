@@ -1,4 +1,5 @@
 import React from 'react'
+import { AnimatePresence } from 'framer-motion'
 
 import { Routes,Route} from 'react-router-dom'
 import Home from './pages/Home'
@@ -39,9 +40,12 @@ import WorkDetailPage from './pages/WorkDetailpage'
 
 
 
+
 const App = () => {
   return (
     <div>
+      <AnimatePresence mode='wait'>
+
     <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
@@ -78,6 +82,7 @@ const App = () => {
       </Routes>
       <Footer/>
 
+      </AnimatePresence>
     </div>
   )
 }
