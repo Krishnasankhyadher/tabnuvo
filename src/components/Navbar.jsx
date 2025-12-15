@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,6 @@ export default function Navbar() {
       className={`w-full bg-white sticky top-0 z-50 transition-shadow ${
         scrolled ? "shadow-md" : ""
       }`}
-      role="banner"
     >
       {/* MAIN NAV */}
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
@@ -59,22 +59,9 @@ export default function Navbar() {
           {/* DESKTOP CTA */}
           <a
             href="/contact"
-            className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-orange-500 border-2 border-transparent hover:bg-orange-500 hover:border-orange-500 hover:text-white transition"
+            className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-orange-500 hover:bg-orange-500 hover:text-white transition"
           >
             Get in touch
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
           </a>
 
           {/* MOBILE TOGGLE */}
@@ -100,84 +87,84 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
-      {open && (
-        <div className="fixed inset-0 z-50 md:hidden">
+      {/* MOBILE MENU WITH ANIMATION */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="fixed inset-0 z-50 md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {/* BACKDROP */}
+            <motion.div
+              className="absolute inset-0 bg-black/40"
+              onClick={() => setOpen(false)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            />
 
-          {/* BACKDROP */}
-          <div
-            onClick={() => setOpen(false)}
-            className="absolute inset-0 bg-black/40"
-          />
+            {/* DRAWER */}
+            <motion.div
+              className="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-6 overflow-y-auto"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+            >
+              {/* HEADER */}
+              <div className="flex items-center justify-between mb-10">
+                <img src="/assets/main.png" alt="Logo" className="h-12 w-auto" />
 
-          {/* DRAWER */}
-          <div className="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-6 overflow-y-auto">
-
-            {/* HEADER */}
-            <div className="flex items-center justify-between mb-10">
-              <img src="/assets/main.png" alt="Logo" className="h-12 w-auto" />
-
-              <button
-                onClick={() => setOpen(false)}
-                className="p-2 rounded-md text-gray-600 hover:bg-gray-100"
-                aria-label="Close menu"
-              >
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            {/* LINKS */}
-            <nav className="space-y-6">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
+                <button
                   onClick={() => setOpen(false)}
-                  className="block text-xl font-medium text-gray-800 hover:text-orange-500 transition"
+                  className="p-2 rounded-md text-gray-600 hover:bg-gray-100"
                 >
-                  {item.label}
-                </a>
-              ))}
-
-              {/* CTA */}
-              <div className="pt-6 border-t border-gray-100">
-                <a
-                  href="/contact"
-                  onClick={() => setOpen(false)}
-                  className="flex items-center justify-center w-full px-6 py-3 rounded-lg bg-orange-500 text-white font-semibold hover:bg-orange-600 transition"
-                >
-                  Get in touch
                   <svg
-                    className="ml-2 w-5 h-5"
+                    className="h-6 w-6"
                     fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
                     viewBox="0 0 24 24"
+                    stroke="currentColor"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                </a>
+                </button>
               </div>
-            </nav>
-          </div>
-        </div>
-      )}
+
+              {/* LINKS */}
+              <nav className="space-y-6">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="block text-xl font-medium text-gray-800 hover:text-orange-500 transition"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+
+                {/* CTA */}
+                <div className="pt-6 border-t border-gray-100">
+                  <a
+                    href="/contact"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center justify-center w-full px-6 py-3 rounded-lg bg-orange-500 text-white font-semibold hover:bg-orange-600 transition"
+                  >
+                    Get in touch
+                  </a>
+                </div>
+              </nav>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
