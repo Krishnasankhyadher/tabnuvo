@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const BlogDetailPage = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -23,7 +23,7 @@ const BlogDetailPage = () => {
     const fetchBlog = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`${API}/api/blogs/${id}`);
+        const res = await fetch(`${API}/api/blogs/slug/${slug}`);
         if (!res.ok) throw new Error("Blog not found");
         const data = await res.json();
         setBlog(data);
@@ -35,7 +35,7 @@ const BlogDetailPage = () => {
       }
     };
     fetchBlog();
-  }, [id]);
+  }, [slug]);
   
   // --- LOADING SKELETON (WIDER) ---
   if (loading) {

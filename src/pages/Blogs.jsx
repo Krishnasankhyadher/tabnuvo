@@ -80,7 +80,7 @@ const Blogs = () => {
               return (
                 <Link
                 key={blog._id}
-                to={`/blog/${blog.url || blog._id}`}
+                to={`/blog/${blog.slug || blog._id}`}
                 className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                 >
                   {/* Image Container - Taller for 2-col layout */}

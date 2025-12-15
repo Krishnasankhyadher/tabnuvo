@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 
 const Blogcard = ({ blog }) => {
   const navigate = useNavigate();
-  const { title, image, _id } = blog;   // object destructuring
+  const { title, image, _id, slug } = blog;   // object destructuring
 
   return (
     <div
-      onClick={() => navigate(`/blog/${_id}`)}  // use navigate, not useNavigate
+      onClick={() => navigate(`/blog/${slug}`)}  // use navigate, not useNavigate
       className="w-full rounded-lg overflow-hidden shadow hover:scale-102 hover:shadow-primary/25 duration-300 cursor-pointer"
     >
       <img src={image} alt={title || "no image"} className="aspect-video" />

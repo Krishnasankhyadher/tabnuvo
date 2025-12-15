@@ -58,7 +58,7 @@ const App = () => {
         <Route path="/product-design" element={<Productdesign/>}></Route>
         <Route path="/branding" element={<Branding/>}></Route>
         <Route path="/blogs" element={<Blogs/>}></Route>
-        <Route path="/blogs/:id" element={<Blogdetails/>}></Route>
+        <Route path="/blogs/:slug" element={<Blogdetails/>}></Route>
         
         <Route path="/admin" element={<AdminPage/>}></Route>
         <Route path="/admin/dashboard" element={<AdminDashboard/>}></Route>
@@ -68,7 +68,7 @@ const App = () => {
         <Route path="/admin/dashboard/newsletter" element={<AdminEnquiries/>}></Route>
         <Route path="/admin/dashboard/enquiries" element={<Enquiries/>}></Route>
         <Route path="/admin/dashboard/static-seo" element={<AdminSeo/>}></Route>
-        <Route path="/blog/:id" element={<BlogDetailPage/>}></Route>
+        <Route path="/blog/:slug" element={<BlogDetailPage/>}></Route>
         <Route path="/paid-ads" element={<Paidads/>}></Route>
         <Route path="/business-consulting" element={<Bussiness/>}></Route>
         <Route path="/ecommerce-management" element={<Ecommerce/>}></Route>

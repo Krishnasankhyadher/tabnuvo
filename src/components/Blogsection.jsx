@@ -25,14 +25,14 @@ const BlogRowCard = ({ blog }) => {
   if (!blog) return null;
 
   const navigate = useNavigate();
-  const { _id, title, mainImage } = blog;
+  const { title, mainImage,slug } = blog;
 
   return (
     <motion.div
       variants={fadeInUp}
       initial="rest"
       whileHover="hover"
-      onClick={() => navigate(`/blog/${_id}`)}
+      onClick={() => navigate(`/blog/${slug}`)}
       className="w-full rounded-lg border border-gray-200 overflow-hidden bg-white cursor-pointer shadow-sm relative"
     >
       <motion.div 
@@ -188,7 +188,7 @@ const BlogsSection = () => {
           className="space-y-4"
         >
           {topBlogs.map(blog => (
-            <BlogRowCard key={blog._id} blog={blog} />
+            <BlogRowCard key={blog.slug} blog={blog} />
           ))}
         </motion.div>
 
