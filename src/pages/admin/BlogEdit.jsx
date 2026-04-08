@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { authFetch } from "../../utils/auth";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -18,7 +19,7 @@ export default function EditBlog() {
     const form = new FormData();
     Object.entries(blog).forEach(([k, v]) => form.append(k, v));
 
-    await fetch(`${API}/api/blogs/${id}`, {
+    await authFetch(`${API}/api/blogs/${id}`, {
       method: "PUT",
       body: form,
     });

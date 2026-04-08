@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -37,84 +37,83 @@ const smmFaqs = [
 
 const items = [
   {
-    icon: "/assets/iwd1.jpg",
-    title: "Static Website",
+    icon: "/assets1/Icons/TABNUVO ICONS/Understanding the Purpose First.png",
+    title: "Understanding the Purpose First",
     description:
-      "We enhance website performance for search engines by crafting targeted, keyword-driven content tailored to meet the unique needs and objectives of our clients. Our content, penned by experienced writers with extensive industry experience, is authentic and designed to optimise all pages with elements such as meta descriptions, H1 titles, and meta titles."
+      "Building a website without a clear goal is like opening a store without deciding what you want to sell. Before development begins, we understand what the website is meant to achieve, whether it's generating leads, telling a brand story, or driving sales."
   },
   {
-    icon: "/assets/iwd2.jpg",
-    title: "Dynamic Website",
+    icon: "/assets1/Icons/TABNUVO ICONS/Structure That Makes Sense.png",
+    title: "Structure That Makes Sense",
     description:
-      "Utilizing the expertise of our top-tier SEO professionals, we deliver premium backlinks and off-page strategies to our clients. Our carefully crafted articles for off-page submissions are tailored to align with the tone, audience, ."
+      "A website with poor structure is like a maze with no exit. We focus on building clean, logical structures that help visitors find what they're looking for quickly, without unnecessary clicks or distractions."
   },
   {
-    icon: "/assets/iwd3.jpg",
-    title: "E-commerce Website",
+    icon: "/assets1/Icons/TABNUVO ICONS/Performance & Responsiveness.png",
+    title: "Performance & Responsiveness",
     description:
-      "We offer technical solutions aimed at enhancing your website’s visibility on search engines. Our team conducts thorough analyses of websites to identify and rectify technical errors and irregularities that may affect performance, speed, or functionality."
+      "A slow or broken website is like a shop that takes forever to open its doors. We develop websites that load fast, work smoothly across devices, and perform reliably because patience online is limited and first impressions are short."
   },
   {
-    icon: "/assets/iwd4.jpg",
-    title: "Website Maintance",
+    icon: "/assets1/Icons/TABNUVO ICONS/Seamless Integration & Functionality.png",
+    title: "Seamless Integration & Functionality",
     description:
-      "Understanding the impact of your digital marketing efforts is crucial. Analytics helps guide your SEO strategy and allows for informed decisions. At The Ad-ults, we deeply study analytical performance of your marketing efforts to gain insights, improve campaigns, and achieve better results."
+      "A website isn't just a collection of pages, it's a working system. We ensure all forms, integrations, and functionalities work together seamlessly to support your business goals."
   },
   {
-    icon: "/assets/iwd5.jpg",
-    title: "CRM Web Softwares",
+    icon: "/assets1/Icons/TABNUVO ICONS/Understanding the Purpose First.png",
+    title: "Secure, Scalable & Easy to Manage",
     description:
-      "In this era where AI reigns supreme, we help brands in community building by offering humanised blog content sure to get a great amount of hits. We research quality keywords that are sure to get maximum results and help you create a business that stands out."
+      "A website should grow with your business, not hold it back. We build websites that are secure, scalable, and easy to manage, so updates don't feel like a technical headache and growth doesn't require starting from scratch."
   },
   {
-    icon :"/assets/iwd6.jpg",
-    title: "Website Redesign",
+    icon: "/assets1/Icons/TABNUVO ICONS/Structure That Makes Sense.png",
+    title: "Make your website worthy of your business!",
     description:
-      "We strategise content in a manner that’s in line with your brand, is trending, gains traction from Google, social media etc. Our content strategy helps you gain new users while the existing users stay hooked to “What’s next?”"
+      "Your website shouldn't just exist online, it should work for your business. We build websites that are clear, fast, and built to perform."
   }
 ];
 
 
 const WebsiteDesign = () => {
   return (
-        <motion.div
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
 
-    <div>
-      <Navbar/>
-         <Hero
-                bgImage="/assets/contact.png"
-                overlayImage="/assets/wst.png"
-                />
-              <PostingSection
-      images={[
-        "/assets/iw1.jpg",
-        "/assets/iw2.jpg",
-        "/assets/iw3.jpg",
-        "/assets/iw4.jpg",
-      ]}
-      heading="Best Web Designing and
-      Development Services"
-      text="In the Modern era of Digitalisation, your web address is more important for your business than your physical address. Your business is analyzed, judged, and valued by your clients as well as your potential investors based on your website. Whether you work in B2B, B2C, or D2C. Your website can make or break your impression.
+      <div>
+        <Navbar />
+        <Hero
+                        bgImage="/assets1/background.png"
+                        overlayImage="/assets1/Overlay/website design and devlopment.png"
+                    />
+        <PostingSection
+          images={[
+            "/assets1/IMAGES1/Website Development1.jpg",
+            "/assets1/IMAGES1/Website Development2.jpg",
+            "/assets1/IMAGES1/Website Development3.jpg",
+            "/assets1/IMAGES1/Website Development4.jpg",
+          ]}
+          heading="YOUR DIGITAL SHOP NEEDS TO STAND OUT"
+          text="In the Modern era of Digitalisation, your web address is more important for your business than your physical address. Your business is analyzed, judged, and valued by your clients as well as your potential investors based on your website. Whether you work in B2B, B2C, or D2C. Your website can make or break your impression.
       Every website/app is judged on 2 parameters, how it looks and how it works. At The Ad-ults we believe in just 1 philosophy, “Your visitors should get what they are looking for within 2 minutes of pressing enter on your web address”. With 15+ years of experience in UI/UX and Development, our team is capable of making eye-."/>
-<SocialMediaMagic
-      sectionTitle="Web Designing Services at TABNUVO PVT. LTD."
-      items={items}
-      />
-    <Contact />
-      <FAQSection
-        eyebrow="FAQs"
-        title="Social Media"
-        titleSecondLine="Marketing FAQs"
-        faqs={smmFaqs}
-      />
-      
-    </div>
-        </motion.div>
+        <SocialMediaMagic
+          sectionTitle="Web Designing Services at TABNUVO PVT. LTD."
+          items={items}
+        />
+        <Contact />
+        <FAQSection
+          eyebrow="FAQs"
+          title="Social Media"
+          titleSecondLine="Marketing FAQs"
+          faqs={smmFaqs}
+        />
+
+      </div>
+    </motion.div>
   )
 }
 

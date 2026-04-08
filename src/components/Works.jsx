@@ -1,105 +1,98 @@
-import React from "react";
-import { Link } from "react-router-dom"; // For navigation
-import { ArrowRight, Calendar } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Calendar, Loader2 } from "lucide-react";
 
-// Static Data for your Work/Projects
-const projects = [
-  {
-    id: "divine-bite-ai",
-    title: "Divine Bite AI Chip",
-    category: "Technology",
-    year: "2022",
-    img: "/assets/ai.jpg",
-    description: "An advanced AI chip architecture designed for next-gen processing.",
-  },
-  {
-    id: "divine-bite-robot",
-    title: "Autonomous Robot",
-    category: "Robotics",
-    year: "2022",
-    img: "/assets/robot.jpg",
-    description: "Self-learning robotics system for automated manufacturing.",
-  },
-  {
-    id: "nature-waterfall",
-    title: "Fluid Dynamics",
-    category: "Simulation",
-    year: "2023",
-    img: "/assets/waterfall.jpg",
-    description: "Real-time water physics simulation using particle systems.",
-  },
-  {
-    id: "space-nebula",
-    title: "Nebula Explorer",
-    category: "VR Experience",
-    year: "2023",
-    img: "/assets/space-nebula.jpg",
-    description: "Virtual reality journey through deep space nebulas.",
-  },
-  {
-    id: "astronaut-suit",
-    title: "Mars Suit Design",
-    category: "Design",
-    year: "2024",
-    img: "/assets/Astronaut.jpg",
-    description: "Ergonomic and life-support integrated suit design for Mars colonization.",
-  },
-];
+const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const GallerySection = () => {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${API}/api/works`)
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch works", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center py-32 text-[#2f6c5f]">
+        <Loader2 size={40} className="animate-spin mb-4" />
+        <p className="text-gray-600 font-medium">Loading Portfolio...</p>
+      </div>
+    );
+  }
+
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
-      {/* Grid Layout - Matches Blog Page (1 col mobile, 2 col desktop) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         
-        {projects.map((project) => (
-          <Link
-            key={project.id}
-            to={`/work/${project.id}`} // Navigates to detail page
-            className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
-          >
-            {/* Image Container */}
-            <div className="relative h-64 sm:h-72 overflow-hidden bg-gray-100">
-              <img
-                src={project.img}
-                alt={project.title}
-                className="h-full w-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-              />
-              
-              {/* Category Badge (Optional, matches Blog style) */}
-              <div className="absolute top-5 left-5 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#2f6c5f] shadow-sm">
-                {project.category}
-              </div>
-            </div>
+        {projects.length === 0 ? (
+          <div className="col-span-1 md:col-span-2 text-center py-20 text-gray-500">
+            No projects available yet.
+          </div>
+        ) : (
+          projects.map((project) => {
+            let imageUrl = "/assets/ai.jpg"; // fallback
+            if (project.mainImage) {
+              if (typeof project.mainImage === 'object' && project.mainImage.url) {
+                imageUrl = project.mainImage.url;
+              } else if (typeof project.mainImage === 'string') {
+                imageUrl = project.mainImage.startsWith('http')
+                  ? project.mainImage
+                  : `${API}/${project.mainImage}`;
+              }
+            }
 
-            {/* Content Container */}
-            <div className="p-8 flex-1 flex flex-col">
-              {/* Year / Metadata */}
-              <div className="flex items-center gap-2 text-xs font-medium text-gray-500 mb-4">
-                <Calendar size={14} />
-                <span>{project.year}</span>
-              </div>
+            return (
+              <Link
+                key={project._id}
+                to={`/work/${project.slug}`}
+                className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="relative h-64 sm:h-72 overflow-hidden bg-gray-100">
+                  <img
+                    src={imageUrl}
+                    alt={project.title}
+                    className="h-full w-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  />
+                  
+                  <div className="absolute top-5 left-5 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#2f6c5f] shadow-sm">
+                    {project.category || "General"}
+                  </div>
+                </div>
 
-              {/* Title */}
-              <h2 className="text-2xl font-bold text-gray-900 leading-tight mb-3 group-hover:text-[#2f6c5f] transition-colors">
-                {project.title}
-              </h2>
+                <div className="p-8 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 text-xs font-medium text-gray-500 mb-4">
+                    <Calendar size={14} />
+                    <span>{project.year || new Date(project.createdAt).getFullYear()}</span>
+                  </div>
 
-              {/* Description (Optional - remove if you only want title) */}
-              <p className="text-gray-600 text-sm mb-6 line-clamp-2">
-                {project.description}
-              </p>
+                  <h2 className="text-2xl font-bold text-gray-900 leading-tight mb-3 group-hover:text-[#2f6c5f] transition-colors">
+                    {project.title}
+                  </h2>
 
-              {/* Footer / CTA */}
-              <div className="mt-auto pt-6 border-t border-gray-100">
-                <span className="inline-flex items-center gap-2 text-sm font-bold text-[#2f6c5f] group-hover:gap-3 transition-all">
-                  View Project <ArrowRight size={16} />
-                </span>
-              </div>
-            </div>
-          </Link>
-        ))}
-        
+                  <p className="text-gray-600 text-sm mb-6 line-clamp-2">
+                    {project.subtitle}
+                  </p>
+
+                  <div className="mt-auto pt-6 border-t border-gray-100">
+                    <span className="inline-flex items-center gap-2 text-sm font-bold text-[#2f6c5f] group-hover:gap-3 transition-all">
+                      View Project <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            )
+          })
+        )}
       </div>
     </section>
   );

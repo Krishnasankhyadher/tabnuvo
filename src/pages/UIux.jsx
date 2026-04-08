@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -37,84 +37,83 @@ const smmFaqs = [
 
 const items = [
   {
-    icon: "/assets/is1.jpg",
-    title: "Platform analysis and prioritizing",
+    icon: "/assets1/Icons/TABNUVO ICONS/Understanding Users Before Screens.png",
+    title: "Understanding Users Before Screens",
     description:
-      "Consider someone having lunch while sitting in a bathtub – not exactly a flattering sight, is it? Similarly, prioritizing specific social media platforms for your business and tailoring your content accordingly can capture the attention of your audience, generate engagement and helps you generate business."
+      "Designing screens without understanding users is like arranging furniture without knowing the room size. We start by studying user behaviour, needs, and expectations, so every interface decision is grounded in how people actually think and move through a product."
   },
   {
-    icon: "/assets/is2.jpg",
-    title: "Strategic Content Creation",
+    icon: "/assets1/Icons/TABNUVO ICONS/Clear & Intuitive User Flows.png",
+    title: "Clear & Intuitive User Flows",
     description:
-      "Beyond mere icons, images, and text, we adopt a comprehensive approach to content creation. By utilizing the influence of shape, typography, and color psychology, we breathe vitality into our designs, ensuring they authentically reflect the brand's vision."
+      "A confusing journey can make even the best product feel broken. We focus on creating logical, seamless flows that guide users naturally from one step to the next, making interactions feel smooth and effortless."
   },
   {
-    icon: "/assets/is3.jpg",
-    title: "Content planning",
+    icon: "/assets1/Icons/TABNUVO ICONS/Interfaces That Feel Familiar.png",
+    title: "Interfaces That Feel Familiar",
     description:
-      "When you’re building a brand, the most important component you’ll be needing is storytelling and philosophy. Content planning works as the vessel that helps brands portray their story and what they stand for in a fun and captivating way."
+      "An interface should feel like something users already know, not something they have to learn. Through layout, spacing, and visual hierarchy, we design interfaces that feel comfortable and easy to use."
   },
   {
-    icon: "/assets/is4.jpg",
-    title: "Social Media Campaigns",
+    icon: "/assets1/Icons/TABNUVO ICONS/Visual Design with Purpose.png",
+    title: "Visual Design with Purpose",
     description:
-      "Social media campaigns is all about targeting that emotion and building on it. We craft campaigns that stand apart from the crowd, are catchy and are sure to give life to your brand. Our 12+ years of content experience helps us in having a strong understanding of people’s emotions."
+      "Pretty screens alone don't solve problems. Every colour, button, and interaction is designed with intent to guide attention, reduce friction, and improve usability. The goal is not decoration, but clarity that supports the overall experience."
   },
   {
-    icon: "/assets/is5.jpg",
-    title: "Meta Ads",
+    icon: "/assets1/Icons/TABNUVO ICONS/Understanding Users Before Screens.png",
+    title: "Tested, Refined & Ready",
     description:
-      "Our team of Meta Ads specialists can help you reach your target audience with precise targeting, captivating ad formats, and detailed analytics. Whether you aim to enhance brand visibility, boost website traffic, or generate leads, we craft impactful Facebook ad campaigns that deliver results."
+      "Launching without testing is like opening a restaurant without tasting the food. We test designs, gather feedback, and refine experiences to remove confusion and friction."
   },
   {
-    icon :"/assets/is6.jpg",
-    title: "Meme Marketing",
+    icon: "/assets1/Icons/TABNUVO ICONS/Clear & Intuitive User Flows.png",
+    title: "Make your website worthy of your business!",
     description:
-      "This one is fun! See the rhyming there? Standing beyond the regular marketing techniques, this form of marketing can be utilised to sneak in your brand so quietly that people won’t even know what hit them! It's one of the most successful ways of marketing because of one simple reason - everyone loves memes!"
+      "Your Website/app is your Showroom! If your homepage is your front desk, every line, paragraph and button is your employee, every picture is your product/service."
   }
 ];
 
 
 const UIux = () => {
   return (
-        <motion.div
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
 
-    <div>
-      <Navbar/>
-         <Hero
-        bgImage="/assets/contact.png"
-        overlayImage="/assets/ui.png"
-        />
-      <PostingSection
-      images={[
-        "/assets/ise1.jpg",
-        "/assets/ise2.jpg",
-        "/assets/ise3.jpg",
-        "/assets/ise4.jpg",
-      ]}
-      heading="Search Engine
-      Optimization  Services"
-      text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
+      <div>
+        <Navbar />
+        <Hero
+                        bgImage="/assets1/background.png"
+                        overlayImage="/assets1/Overlay/ui ux design.png"
+                    />
+        <PostingSection
+          images={[
+            "/assets1/IMAGES1/UIUX Design1.jpg",
+            "/assets1/IMAGES1/UIUX Design2.jpg",
+            "/assets1/IMAGES1/UIUX Design3.jpg",
+            "/assets1/IMAGES1/UIUX Design4.jpg",
+          ]}
+          heading="YOUR WEBSITE/APP IS YOUR SHOWROOM!"
+          text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
       At The Ad-ults, we offer a team of seasoned industry professionals who specialize in guiding our clients towards the top spot strategically. From devising content strategies to building high-quality backlinks, our SEO experts demonstrate unparalleled proficiency in both On-page and Off-page SEO techniques."/>
-<SocialMediaMagic
-      sectionTitle="SOCIAL MEDIA MAGIC"
-      items={items}
-    />
-    <Contact />
-    <FAQSection
-        eyebrow="FAQs"
-        title="Social Media"
-        titleSecondLine="Marketing FAQs"
-        faqs={smmFaqs}
+        <SocialMediaMagic
+          sectionTitle="UI/UX Design Services"
+          items={items}
         />
-      
-    </div>
-        </motion.div>
+        <Contact />
+        <FAQSection
+          eyebrow="FAQs"
+          title="Social Media"
+          titleSecondLine="Marketing FAQs"
+          faqs={smmFaqs}
+        />
+
+      </div>
+    </motion.div>
   )
 }
 

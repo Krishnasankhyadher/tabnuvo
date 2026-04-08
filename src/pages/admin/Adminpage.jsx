@@ -33,10 +33,11 @@ const AdminLogin = () => {
         return;
       }
 
-      // ✅ Mark admin as logged in
+      // Store JWT token for authenticated requests
+      localStorage.setItem("adminToken", data.token);
       localStorage.setItem("isAdmin", "true");
 
-      // ✅ Go to dashboard
+      // Go to dashboard
       navigate("/admin/dashboard");
     } catch (err) {
       console.error(err);

@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -37,85 +37,85 @@ const smmFaqs = [
 
 const items = [
   {
-    icon: "/assets/is1.jpg",
-    title: "Platform analysis and prioritizing",
+    icon: "/assets1/Icons/Product Design/Understanding the Product & Its Users.png",
+    title: "Understanding the Product & Its Users",
     description:
-      "Consider someone having lunch while sitting in a bathtub – not exactly a flattering sight, is it? Similarly, prioritizing specific social media platforms for your business and tailoring your content accordingly can capture the attention of your audience, generate engagement and helps you generate business."
+      "Designing a product without understanding its users is like serving soup with a fork. Before we design anything, we dig into what the product is meant to solve and who it is meant for."
   },
   {
-    icon: "/assets/is2.jpg",
-    title: "Strategic Content Creation",
+    icon: "/assets1/Icons/Product Design/Design That Works First.png",
+    title: "Design That Works First",
     description:
-      "Beyond mere icons, images, and text, we adopt a comprehensive approach to content creation. By utilizing the influence of shape, typography, and color psychology, we breathe vitality into our designs, ensuring they authentically reflect the brand's vision."
+      "A beautiful product that is hard to use is like a door that looks stunning but won't open properly. Function always comes first. We focus on making interactions simple, logical, and intuitive."
   },
   {
-    icon: "/assets/is3.jpg",
-    title: "Content planning",
+    icon: "/assets1/Icons/Product Design/Creating a Visual & Emotional Connect.png",
+    title: "Creating a Visual & Emotional Connect",
     description:
-      "When you’re building a brand, the most important component you’ll be needing is storytelling and philosophy. Content planning works as the vessel that helps brands portray their story and what they stand for in a fun and captivating way."
+      "First impressions matter. Through thoughtful shapes, colours, and visual balance, we design products that feel approachable and reliable, creating an instant emotional connection."
   },
   {
-    icon: "/assets/is4.jpg",
-    title: "Social Media Campaigns",
+    icon: "/assets1/Icons/Product Design/Using Trends with Purpose.png",
+    title: "Using Trends with Purpose",
     description:
-      "Social media campaigns is all about targeting that emotion and building on it. We craft campaigns that stand apart from the crowd, are catchy and are sure to give life to your brand. Our 12+ years of content experience helps us in having a strong understanding of people’s emotions."
+      "Chasing every trend is like changing your outfit every hour. We study trends for insights and apply them only when they genuinely improve the product and keep it relevant."
   },
   {
-    icon: "/assets/is5.jpg",
-    title: "Meta Ads",
+    icon: "/assets1/Icons/Product Design/Understanding the Product & Its Users.png",
+    title: "Making the Product Market-Ready",
     description:
-      "Our team of Meta Ads specialists can help you reach your target audience with precise targeting, captivating ad formats, and detailed analytics. Whether you aim to enhance brand visibility, boost website traffic, or generate leads, we craft impactful Facebook ad campaigns that deliver results."
+      "A product that feels inconsistent across touchpoints is like a conversation that keeps changing topics. We ensure everything works together into a product that fits naturally into the market."
   },
   {
-    icon :"/assets/is6.jpg",
-    title: "Meme Marketing",
+    icon: "/assets1/Icons/Product Design/Design That Works First.png",
+    title: "Outgrow your product!",
     description:
-      "This one is fun! See the rhyming there? Standing beyond the regular marketing techniques, this form of marketing can be utilised to sneak in your brand so quietly that people won’t even know what hit them! It's one of the most successful ways of marketing because of one simple reason - everyone loves memes!"
+      "We help transform products from hero to superhero by making them easier to use, easier to choose, and easier to remember. Because people don't just love features, they also love how products fit into their life."
   }
 ];
 
 
 const Productdesign = () => {
   return (
-        <motion.div
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
 
-    <div>
-      <Navbar/>
+      <div>
+        <Navbar />
         <Hero
-                bgImage="/assets/contact.png"
-                overlayImage="/assets/product.png"
-                />
-              <PostingSection
-      images={[
-        "/assets/iw1.jpg",
-        "/assets/iw2.jpg",
-        "/assets/iw3.jpg",
-        "/assets/iw4.jpg",
-      ]}
-      heading="BRANDING DESIGN"
-      text="In today's era of Social Media prevalence, platforms like Instagram boast approximately 2 billion active mobile users, constituting about 28% of the global population, with its primary user base being young adults aged 18-34. Twitter emerges as one of the most vibrant social media platforms, witnessing active engagement from brands, leaders, and celebrities. Meanwhile, LinkedIn remains unrivaled as the leading professional networking platform.
+                        bgImage="/assets1/background.png"
+                        overlayImage="/assets1/Overlay/product design.png"
+                    />
+        <PostingSection
+          images={[
+            "/assets1/IMAGES1/Product Design1.jpg",
+            "/assets1/IMAGES1/Product Design2.jpg",
+            "/assets1/IMAGES1/Product Design3.jpg",
+            "/assets1/IMAGES1/Product Design4.jpg",
+          ]}
+          heading="OUTGROW YOUR PRODUCT FROM HERO TO SUPERHERO"
+          text="In today's era of Social Media prevalence, platforms like Instagram boast approximately 2 billion active mobile users, constituting about 28% of the global population, with its primary user base being young adults aged 18-34. Twitter emerges as one of the most vibrant social media platforms, witnessing active engagement from brands, leaders, and celebrities. Meanwhile, LinkedIn remains unrivaled as the leading professional networking platform.
       However, these observations merely scratch the surface.
 In the current landscape, a sporadic post here and there won't suffice to make an impact. It's essential to dig deeper to truly stand out in the modern world of Social Media."/>
-<SocialMediaMagic
-      sectionTitle="BRANDING DESIGN"
-      items={items}
-    />
-    <Contact />
-      <FAQSection
-        eyebrow="FAQs"
-        title="Social Media"
-        titleSecondLine="Marketing FAQs"
-        faqs={smmFaqs}
-      />
-      
-      
-    </div>
-        </motion.div>
+        <SocialMediaMagic
+          sectionTitle="BRANDING DESIGN"
+          items={items}
+        />
+        <Contact />
+        <FAQSection
+          eyebrow="FAQs"
+          title="Social Media"
+          titleSecondLine="Marketing FAQs"
+          faqs={smmFaqs}
+        />
+
+
+      </div>
+    </motion.div>
   )
 }
 

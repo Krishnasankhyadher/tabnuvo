@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -39,82 +39,81 @@ const smmFaqs = [
 
 const items = [
   {
-    icon: "/assets/is1.jpg",
-    title: "On Page SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Understanding How the Business Really Runs.png",
+    title: "Understanding How the Business Really Runs",
     description:
-      "We enhance website performance for search engines by crafting targeted, keyword-driven content tailored to meet the unique needs and objectives of our clients. Our content, penned by experienced writers with extensive industry experience, is authentic and designed to optimise all pages with elements such as meta descriptions, H1 titles, and meta titles."
+      "Consulting without understanding day-to-day operations is like giving fitness advice without seeing how someone moves. We start by getting a clear view of how the business actually functions."
   },
   {
-    icon: "/assets/is2.jpg",
-    title: "Off Page SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Streamlining Processes & Workflows.png",
+    title: "Streamlining Processes & Workflows",
     description:
-      "Utilizing the expertise of our top-tier SEO professionals, we deliver premium backlinks and off-page strategies to our clients. Our carefully crafted articles for off-page submissions are tailored to align with the tone, audience, ."
+      "Messy operations slow businesses down quietly. Like traffic caused by a poorly planned junction, small inefficiencies add up over time. We identify gaps, bottlenecks, and unnecessary steps."
   },
   {
-    icon: "/assets/is3.jpg",
-    title: "Technical SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Aligning Teams & Responsibilities.png",
+    title: "Aligning Teams & Responsibilities",
     description:
-      "When you’re building a brand, the most important component you’ll be needing is storytelling and philosophy. Content planning works as the vessel that helps brands portray their story and what they stand for in a fun and captivating way."
+      "When roles are not clear, work overlaps or gets missed. We help define responsibilities, improve handovers, and align teams so everyone knows what they own."
   },
   {
-    icon: "/assets/is4.jpg",
-    title: "Social Media Campaigns",
+    icon: "/assets1/Icons/TABNUVO ICONS/Improving Systems & Decision-Making.png",
+    title: "Improving Systems & Decision-Making",
     description:
-      "Social media campaigns is all about targeting that emotion and building on it. We craft campaigns that stand apart from the crowd, are catchy and are sure to give life to your brand. Our 12+ years of content experience helps us in having a strong understanding of people’s emotions."
+      "Running a business without the right systems is like tracking finances in your head. We help structure tools, reports, and processes that support better decisions."
   },
   {
-    icon: "/assets/is5.jpg",
-    title: "Meta Ads",
+    icon: "/assets1/Icons/TABNUVO ICONS/Planning for Scale & Long-Term Stability.png",
+    title: "Planning for Scale & Long-Term Stability",
     description:
-      "Our team of Meta Ads specialists can help you reach your target audience with precise targeting, captivating ad formats, and detailed analytics. Whether you aim to enhance brand visibility, boost website traffic, or generate leads, we craft impactful Facebook ad campaigns that deliver results."
+      "Growth without preparation can strain operations. We help businesses plan operations for the next 6 months, 1 year, and 2 years, ensuring systems can support long-term growth."
   },
   {
-    icon :"/assets/is6.jpg",
-    title: "Meme Marketing",
+    icon: "/assets1/Icons/TABNUVO ICONS/Understanding How the Business Really Runs.png",
+    title: "Without caring there can be no quality",
     description:
-      "This one is fun! See the rhyming there? Standing beyond the regular marketing techniques, this form of marketing can be utilised to sneak in your brand so quietly that people won’t even know what hit them! It's one of the most successful ways of marketing because of one simple reason - everyone loves memes!"
+      "When roles, processes, and goals are not clear, quality breaks down quietly. Business consulting begins with clarity. Once everyone knows what needs to be done, quality becomes consistent."
   }
 ];
 
 const Bussiness = () => {
   return (
-        <motion.div
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
 
-    <div>
-      <Navbar/>
-      <Hero
-        bgImage="/assets/contact.png"
-        overlayImage="/assets/seo.png"
-        />
-      <PostingSection
-      images={[
-        "/assets/ise1.jpg",
-        "/assets/ise2.jpg",
-        "/assets/ise3.jpg",
-        "/assets/ise4.jpg",
-      ]}
-      heading="Search Engine
-      Optimization  Services"
-      text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
+      <div>
+        <Navbar />
+        <Hero
+                        bgImage="/assets1/background.png"
+                        overlayImage="/assets1/Overlay/Business consulting.png"
+                    />
+        <PostingSection
+          images={[
+            "/assets1/IMAGES1/BUSINESS CONSULTING1.jpg",
+            "/assets1/IMAGES1/BUSINESS CONSULTING2.jpg",
+            "/assets1/IMAGES1/BUSINESS CONSULTING3.jpg",
+            "/assets1/IMAGES1/Business Strategy.jpg",
+          ]}
+          heading="WITHOUT CARING THERE CAN BE NO QUALITY"
+          text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
 At The Ad-ults, we offer a team of seasoned industry professionals who specialize in guiding our clients towards the top spot strategically. From devising content strategies to building high-quality backlinks, our SEO experts demonstrate unparalleled proficiency in both On-page and Off-page SEO techniques."/>
-<SocialMediaMagic
-      sectionTitle="SOCIAL MEDIA MAGIC"
-      items={items}
-    />
-    <Contact />
-    <FAQSection
-        eyebrow="FAQs"
-        title="Social Media"
-        titleSecondLine="Marketing FAQs"
-        faqs={smmFaqs}
-      />
-    </div>
-      </motion.div>
+        <SocialMediaMagic
+          sectionTitle="Business Consulting Services"
+          items={items}
+        />
+        <Contact />
+        <FAQSection
+          eyebrow="FAQs"
+          title="Social Media"
+          titleSecondLine="Marketing FAQs"
+          faqs={smmFaqs}
+        />
+      </div>
+    </motion.div>
   )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -36,83 +36,82 @@ const smmFaqs = [
 
 const items = [
   {
-    icon: "/assets/is1.jpg",
-    title: "On Page SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Starting with the Right Objective.png",
+    title: "Starting with the Right Objective",
     description:
-      "We enhance website performance for search engines by crafting targeted, keyword-driven content tailored to meet the unique needs and objectives of our clients. Our content, penned by experienced writers with extensive industry experience, is authentic and designed to optimise all pages with elements such as meta descriptions, H1 titles, and meta titles."
+      "Running ads without a clear goal is like shouting into a crowd without knowing who you are calling out to. Before launching anything, we define what success looks like, so every ad has a purpose, not just a budget behind it."
   },
   {
-    icon: "/assets/is2.jpg",
-    title: "Off Page SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Targeting That Actually Makes Sense.png",
+    title: "Targeting That Actually Makes Sense",
     description:
-      "Utilizing the expertise of our top-tier SEO professionals, we deliver premium backlinks and off-page strategies to our clients. Our carefully crafted articles for off-page submissions are tailored to align with the tone, audience, ."
+      "Showing the right ad to the wrong person is like offering dessert before the meal. We focus on precise audience targeting based on behaviour, intent, and relevance."
   },
   {
-    icon: "/assets/is3.jpg",
-    title: "Technical SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Creatives That Don't Feel Like Ads.png",
+    title: "Creatives That Don't Feel Like Ads",
     description:
-      "When you’re building a brand, the most important component you’ll be needing is storytelling and philosophy. Content planning works as the vessel that helps brands portray their story and what they stand for in a fun and captivating way."
+      "Most people scroll past ads the way they ignore billboards. We design ad creatives that blend naturally into feeds with clear visuals, strong hooks, and messaging that feels relevant."
   },
   {
-    icon: "/assets/is4.jpg",
-    title: "Social Media Campaigns",
+    icon: "/assets1/Icons/TABNUVO ICONS/Using Trends with Strategy.png",
+    title: "Using Trends with Strategy",
     description:
-      "Social media campaigns is all about targeting that emotion and building on it. We craft campaigns that stand apart from the crowd, are catchy and are sure to give life to your brand. Our 12+ years of content experience helps us in having a strong understanding of people’s emotions."
+      "Jumping on every ad trend is like changing lanes without checking traffic. We use trends thoughtfully, testing what works while keeping the brand and objective intact."
   },
   {
-    icon: "/assets/is5.jpg",
-    title: "Meta Ads",
+    icon: "/assets1/Icons/TABNUVO ICONS/Starting with the Right Objective.png",
+    title: "Tracking, Learning & Optimising",
     description:
-      "Our team of Meta Ads specialists can help you reach your target audience with precise targeting, captivating ad formats, and detailed analytics. Whether you aim to enhance brand visibility, boost website traffic, or generate leads, we craft impactful Facebook ad campaigns that deliver results."
+      "Running ads and not tracking performance is like driving with your eyes closed. We monitor results closely, learn from real data, and optimise continuously."
   },
   {
-    icon :"/assets/is6.jpg",
-    title: "Meme Marketing",
+    icon: "/assets1/Icons/TABNUVO ICONS/Targeting That Actually Makes Sense.png",
+    title: "Discipline your ad account with us",
     description:
-      "This one is fun! See the rhyming there? Standing beyond the regular marketing techniques, this form of marketing can be utilised to sneak in your brand so quietly that people won’t even know what hit them! It's one of the most successful ways of marketing because of one simple reason - everyone loves memes!"
+      "Ad accounts are like children. Give them money without telling them what it is for and they will buy anything at any price. If you tell them what to do, they will do the right thing."
   }
 ];
 
 const Paidads = () => {
   return (
-        <motion.div
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
 
-    <div>
-      <Navbar/>
-         <Hero
-        bgImage="/assets/contact.png"
-        overlayImage="/assets/seo.png"
-        />
-      <PostingSection
-      images={[
-        "/assets/ise1.jpg",
-        "/assets/ise2.jpg",
-        "/assets/ise3.jpg",
-        "/assets/ise4.jpg",
-      ]}
-      heading="Search Engine
-Optimization  Services"
-text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
+      <div>
+        <Navbar />
+        <Hero
+                        bgImage="/assets1/background.png"
+                        overlayImage="/assets1/Overlay/paid ads.png"
+                    />
+        <PostingSection
+          images={[
+            "/assets1/IMAGES1/PAID AD1.jpg",
+            "/assets1/IMAGES1/PAID AD2.jpg",
+            "/assets1/IMAGES1/PAID AD3.jpg",
+            "/assets1/IMAGES1/PAID AD4.jpg",
+          ]}
+          heading="MAKE YOUR AD BUDGET AN INVESTMENT, NOT SPEND!"
+          text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
 At The Ad-ults, we offer a team of seasoned industry professionals who specialize in guiding our clients towards the top spot strategically. From devising content strategies to building high-quality backlinks, our SEO experts demonstrate unparalleled proficiency in both On-page and Off-page SEO techniques."/>
-<SocialMediaMagic
-      sectionTitle="SOCIAL MEDIA MAGIC"
-      items={items}
-    />
-    <Contact />
-    <FAQSection
-        eyebrow="FAQs"
-        title="Social Media"
-        titleSecondLine="Marketing FAQs"
-        faqs={smmFaqs}
+        <SocialMediaMagic
+          sectionTitle="Paid Ads Services"
+          items={items}
         />
-      
-    </div>
-        </motion.div>
+        <Contact />
+        <FAQSection
+          eyebrow="FAQs"
+          title="Social Media"
+          titleSecondLine="Marketing FAQs"
+          faqs={smmFaqs}
+        />
+
+      </div>
+    </motion.div>
   )
 }
 

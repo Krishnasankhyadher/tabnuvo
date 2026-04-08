@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { authFetch } from "../../utils/auth";
 import { useParams, useNavigate } from "react-router-dom";
 import AdminLayout from "../../components/admin/Adminlayout";
 import BlogSeoSection from "../../components/admin/BlogSEOSection";
@@ -124,7 +125,7 @@ export default function BlogEditor() {
     const method = isEditMode ? "PUT" : "POST";
 
     setLoading(true);
-    const res = await fetch(endpoint, { method, body: form });
+    const res = await authFetch(endpoint, { method, body: form });
     const data = await res.json();
     setLoading(false);
 

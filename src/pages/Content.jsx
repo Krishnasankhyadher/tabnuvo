@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -39,82 +39,81 @@ const smmFaqs = [
 
 const items = [
   {
-    icon: "/assets/is1.jpg",
-    title: "On Page SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Knowing What to Say & When.png",
+    title: "Knowing What to Say & When",
     description:
-      "We enhance website performance for search engines by crafting targeted, keyword-driven content tailored to meet the unique needs and objectives of our clients. Our content, penned by experienced writers with extensive industry experience, is authentic and designed to optimise all pages with elements such as meta descriptions, H1 titles, and meta titles."
+      "Posting content without a plan is like speaking in a meeting without knowing the agenda. We start by defining what needs to be said, when it should be said, and why it matters."
   },
   {
-    icon: "/assets/is2.jpg",
-    title: "Off Page SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Planning for Consistency.png",
+    title: "Planning for Consistency",
     description:
-      "Utilizing the expertise of our top-tier SEO professionals, we deliver premium backlinks and off-page strategies to our clients. Our carefully crafted articles for off-page submissions are tailored to align with the tone, audience, ."
+      "Random posting leads to random results. Like a TV show with no schedule, audiences lose interest. We plan content in advance to ensure consistency across platforms."
   },
   {
-    icon: "/assets/is3.jpg",
-    title: "Technical SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Managing Content with Brand Clarity.png",
+    title: "Managing Content with Brand Clarity",
     description:
-      "When you’re building a brand, the most important component you’ll be needing is storytelling and philosophy. Content planning works as the vessel that helps brands portray their story and what they stand for in a fun and captivating way."
+      "Every brand has a personality, and content should reflect that consistently. We manage content by strictly following brand guidelines and carefully choosing which trends to adopt."
   },
   {
-    icon: "/assets/is4.jpg",
-    title: "Social Media Campaigns",
+    icon: "/assets1/Icons/TABNUVO ICONS/Balancing Creativity & Relevance.png",
+    title: "Balancing Creativity & Relevance",
     description:
-      "Social media campaigns is all about targeting that emotion and building on it. We craft campaigns that stand apart from the crowd, are catchy and are sure to give life to your brand. Our 12+ years of content experience helps us in having a strong understanding of people’s emotions."
+      "Creative content is great, but only when it is relevant. Chasing every trend can dilute the message, while ignoring trends can make content feel dated. We strike a balance."
   },
   {
-    icon: "/assets/is5.jpg",
-    title: "Meta Ads",
+    icon: "/assets1/Icons/TABNUVO ICONS/Reviewing, Refining & Improving.png",
+    title: "Reviewing, Refining & Improving",
     description:
-      "Our team of Meta Ads specialists can help you reach your target audience with precise targeting, captivating ad formats, and detailed analytics. Whether you aim to enhance brand visibility, boost website traffic, or generate leads, we craft impactful Facebook ad campaigns that deliver results."
+      "Content is not a one-time task, it is an ongoing process. Like pruning a plant, regular reviews help content grow better. We track performance, refine what works, and improve what doesn't."
   },
   {
-    icon :"/assets/is6.jpg",
-    title: "Meme Marketing",
+    icon: "/assets1/Icons/TABNUVO ICONS/Knowing What to Say & When.png",
+    title: "Content with purpose",
     description:
-      "This one is fun! See the rhyming there? Standing beyond the regular marketing techniques, this form of marketing can be utilised to sneak in your brand so quietly that people won’t even know what hit them! It's one of the most successful ways of marketing because of one simple reason - everyone loves memes!"
+      "Content without structure runs like a headless chicken. We plan, organise, and manage content so it follows a clear flow, stays aligned with brand guidelines."
   }
 ];
 
 const Content = () => {
   return (
-        <motion.div
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
 
-    <div>
-      <Navbar/>
-      <Hero
-        bgImage="/assets/contact.png"
-        overlayImage="/assets/seo.png"
-        />
-      <PostingSection
-      images={[
-        "/assets/ise1.jpg",
-        "/assets/ise2.jpg",
-        "/assets/ise3.jpg",
-        "/assets/ise4.jpg",
-      ]}
-      heading="Search Engine
-Optimization  Services"
-      text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
+      <div>
+        <Navbar />
+        <Hero
+                        bgImage="/assets1/background.png"
+                        overlayImage="/assets1/Overlay/content_managmnet.png"
+                    />
+        <PostingSection
+          images={[
+            "/assets1/IMAGES1/CONTENT MARKETING1.jpg",
+            "/assets1/IMAGES1/CONTENT MARKETING2.jpg",
+            "/assets1/IMAGES1/CONTENT MARKETING3.jpg",
+            "/assets1/IMAGES1/CONTENT MARKETING4.jpg",
+          ]}
+          heading="CONTENT WITHOUT STRUCTURE RUNS LIKE A HEADLESS CHICKEN"
+          text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
 At The Ad-ults, we offer a team of seasoned industry professionals who specialize in guiding our clients towards the top spot strategically. From devising content strategies to building high-quality backlinks, our SEO experts demonstrate unparalleled proficiency in both On-page and Off-page SEO techniques."/>
-<SocialMediaMagic
-      sectionTitle="SOCIAL MEDIA MAGIC"
-      items={items}
-      />
-    <Contact />
-    <FAQSection
-        eyebrow="FAQs"
-        title="Social Media"
-        titleSecondLine="Marketing FAQs"
-        faqs={smmFaqs}
+        <SocialMediaMagic
+          sectionTitle="Content Management Services"
+          items={items}
         />
-    </div>
-        </motion.div>
+        <Contact />
+        <FAQSection
+          eyebrow="FAQs"
+          title="Social Media"
+          titleSecondLine="Marketing FAQs"
+          faqs={smmFaqs}
+        />
+      </div>
+    </motion.div>
   )
 }
 

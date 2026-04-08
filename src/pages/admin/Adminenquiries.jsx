@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
+import { authFetch } from "../../utils/auth";
 import AdminLayout from "../../components/admin/Adminlayout";
 import {
   Search,
@@ -37,7 +38,7 @@ export default function AdminNewsletter() {
       setLoading(true);
       setError(null);
 
-      const res = await fetch(`${API_BASE}/api/newsletter`);
+      const res = await authFetch(`${API_BASE}/api/newsletter`);
       if (!res.ok) throw new Error("Failed to load newsletter subscribers");
 
       const data = await res.json();
@@ -56,7 +57,7 @@ export default function AdminNewsletter() {
     if (!window.confirm("Delete this subscriber? This action cannot be undone.")) return;
 
     try {
-      const res = await fetch(`${API_BASE}/api/newsletter/${id}`, {
+      const res = await authFetch(`${API_BASE}/api/newsletter/${id}`, {
         method: "DELETE",
       });
 
@@ -272,9 +273,9 @@ export default function AdminNewsletter() {
                             <span className="text-[10px] text-gray-400 whitespace-nowrap">
                               {s.createdAt
                                 ? new Date(s.createdAt).toLocaleDateString(
-                                    undefined,
-                                    { month: "short", day: "numeric" }
-                                  )
+                                  undefined,
+                                  { month: "short", day: "numeric" }
+                                )
                                 : ""}
                             </span>
                           </div>
@@ -321,9 +322,8 @@ export default function AdminNewsletter() {
 
         {/* 1. Backdrop Overlay */}
         <div
-          className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${
-            selected ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+          className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${selected ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
           onClick={() => setSelected(null)}
         />
 
@@ -387,10 +387,10 @@ export default function AdminNewsletter() {
                           : "Unknown Date"}
                       </span>
                     </div>
-                    
+
                     <div className="flex items-center gap-3 text-sm text-gray-600">
-                       <User size={16} className="text-gray-400" />
-                       <span>ID: <span className="text-xs font-mono text-gray-400">{selected._id}</span></span>
+                      <User size={16} className="text-gray-400" />
+                      <span>ID: <span className="text-xs font-mono text-gray-400">{selected._id}</span></span>
                     </div>
                   </div>
                 </div>

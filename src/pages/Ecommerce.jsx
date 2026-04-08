@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -39,83 +39,82 @@ const smmFaqs = [
 
 const items = [
   {
-    icon: "/assets/is1.jpg",
-    title: "On Page SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Understanding the Marketplace & Buyer Behaviour.png",
+    title: "Understanding the Marketplace & Buyer Behaviour",
     description:
-      "We enhance website performance for search engines by crafting targeted, keyword-driven content tailored to meet the unique needs and objectives of our clients. Our content, penned by experienced writers with extensive industry experience, is authentic and designed to optimise all pages with elements such as meta descriptions, H1 titles, and meta titles."
+      "Selling on marketplaces without understanding how people shop there is like setting up a store inside a mall and expecting footfall to find you on its own. We start by understanding how buyers search, compare, and decide."
   },
   {
-    icon: "/assets/is2.jpg",
-    title: "Off Page SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Listings That Win the Click.png",
+    title: "Listings That Win the Click",
     description:
-      "Utilizing the expertise of our top-tier SEO professionals, we deliver premium backlinks and off-page strategies to our clients. Our carefully crafted articles for off-page submissions are tailored to align with the tone, audience, ."
+      "On marketplaces, visibility decides everything. A strong product with weak listings is like a product placed on the lowest shelf. We optimise titles, descriptions, images, A+ content, and keywords."
   },
   {
-    icon: "/assets/is3.jpg",
-    title: "Technical SEO",
+    icon: "/assets1/Icons/TABNUVO ICONS/Organic Ranking & Paid Visibility.png",
+    title: "Organic Ranking & Paid Visibility",
     description:
-      "When you’re building a brand, the most important component you’ll be needing is storytelling and philosophy. Content planning works as the vessel that helps brands portray their story and what they stand for in a fun and captivating way."
+      "Relying only on ads or only on organic ranking is like waiting for reviews before showing up. We manage both organic ranking and paid marketplace ads, planning growth across 6-month, 1-year, and 2-year timelines."
   },
   {
-    icon: "/assets/is4.jpg",
-    title: "Social Media Campaigns",
+    icon: "/assets1/Icons/TABNUVO ICONS/Managing Marketplace Operations.png",
+    title: "Managing Marketplace Operations",
     description:
-      "Social media campaigns is all about targeting that emotion and building on it. We craft campaigns that stand apart from the crowd, are catchy and are sure to give life to your brand. Our 12+ years of content experience helps us in having a strong understanding of people’s emotions."
+      "Marketplaces come with their own rules, dashboards, and moving parts. We manage operations like inventory health, pricing consistency, and platform compliance so the store runs smoothly."
   },
   {
-    icon: "/assets/is5.jpg",
-    title: "Meta Ads",
+    icon: "/assets1/Icons/TABNUVO ICONS/Performance Tracking & Long-Term Growth.png",
+    title: "Performance Tracking & Long-Term Growth",
     description:
-      "Our team of Meta Ads specialists can help you reach your target audience with precise targeting, captivating ad formats, and detailed analytics. Whether you aim to enhance brand visibility, boost website traffic, or generate leads, we craft impactful Facebook ad campaigns that deliver results."
+      "Marketplace success is not built overnight. We closely track performance metrics and refine our strategies over time to achieve steady growth and long-term stability on the platform."
   },
   {
-    icon :"/assets/is6.jpg",
-    title: "Meme Marketing",
+    icon: "/assets1/Icons/TABNUVO ICONS/Managing Marketplace Operations2.png",
+    title: "Being online is not the same as being visible",
     description:
-      "This one is fun! See the rhyming there? Standing beyond the regular marketing techniques, this form of marketing can be utilised to sneak in your brand so quietly that people won’t even know what hit them! It's one of the most successful ways of marketing because of one simple reason - everyone loves memes!"
+      "E-commerce management is about being present where decisions are made. From listings and visibility to ads and operations, every piece needs to work together to drive sales."
   }
 ];
 
 const Ecommerce = () => {
   return (
-        <motion.div
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
 
-    <div>
-      <Navbar/>
+      <div>
+        <Navbar />
         <Hero
-        bgImage="/assets/contact.png"
-        overlayImage="/assets/seo.png"
-        />
-      <PostingSection
-      images={[
-        "/assets/ise1.jpg",
-        "/assets/ise2.jpg",
-        "/assets/ise3.jpg",
-        "/assets/ise4.jpg",
-      ]}
-      heading="Search Engine
-      Optimization  Services"
-      text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
+                        bgImage="/assets1/background.png"
+                        overlayImage="/assets1/Overlay/E commerce.png"
+                    />
+        <PostingSection
+          images={[
+            "/assets1/IMAGES1/E COMMERCE1.jpg",
+            "/assets1/IMAGES1/E COMMERCE2.jpg",
+            "/assets1/IMAGES1/E COMMERCE3.jpg",
+            "/assets1/IMAGES1/E COMMERCE4.jpg",
+          ]}
+          heading="BEING ONLINE IS NOT THE SAME AS BEING VISIBLE"
+          text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.
 At The Ad-ults, we offer a team of seasoned industry professionals who specialize in guiding our clients towards the top spot strategically. From devising content strategies to building high-quality backlinks, our SEO experts demonstrate unparalleled proficiency in both On-page and Off-page SEO techniques."/>
-<SocialMediaMagic
-      sectionTitle="SOCIAL MEDIA MAGIC"
-      items={items}
-    />
-    <Contact />
-    <FAQSection
-        eyebrow="FAQs"
-        title="Social Media"
-        titleSecondLine="Marketing FAQs"
-        faqs={smmFaqs}
-      />
-      
-    </div>
-        </motion.div>
+        <SocialMediaMagic
+          sectionTitle="E-Commerce Management Services"
+          items={items}
+        />
+        <Contact />
+        <FAQSection
+          eyebrow="FAQs"
+          title="Social Media"
+          titleSecondLine="Marketing FAQs"
+          faqs={smmFaqs}
+        />
+
+      </div>
+    </motion.div>
   )
 }
 

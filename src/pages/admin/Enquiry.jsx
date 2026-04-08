@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
+import { authFetch } from "../../utils/auth";
 import AdminLayout from "../../components/admin/Adminlayout";
 import {
   Search,
@@ -36,7 +37,7 @@ export default function Enquiries() {
     try {
       setLoading(true);
       setError(null);
-      const res = await fetch(`${API_BASE}/api/enquiry`);
+      const res = await authFetch(`${API_BASE}/api/enquiry`);
       if (!res.ok) throw new Error(`Failed to load enquiries (${res.status})`);
       const data = await res.json();
       setEnquiries(Array.isArray(data) ? data : []);
@@ -52,7 +53,7 @@ export default function Enquiries() {
   async function handleDelete(id) {
     if (!window.confirm("Delete this enquiry? This action cannot be undone.")) return;
     try {
-      const res = await fetch(`${API_BASE}/api/enquiry/${id}`, { method: "DELETE" });
+      const res = await authFetch(`${API_BASE}/api/enquiry/${id}`, { method: "DELETE" });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
         throw new Error(body.message || `Delete failed (${res.status})`);

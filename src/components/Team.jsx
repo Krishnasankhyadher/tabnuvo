@@ -2,41 +2,29 @@ import React from "react";
 
 const team = [
   { 
-    name: "Alex Morgan", 
-    role: "Founder & CEO", 
-    img: "/assets/team-1.jpg", 
-    alt: "Founder" 
+    name: "Avinash", 
+    role: "Partner", 
+    img: "/assets1/Team/Avinash Partner.jpeg", 
+    alt: "Avinash" 
   },
   { 
-    name: "Sarah Jenkins", 
-    role: "Creative Director", 
-    img: "/assets/team-2.jpg", 
-    alt: "Team member 1" 
+    name: "Sagar", 
+    role: "Business Manager", 
+    img: "/assets1/Team/Sagar Business Manager.jpeg", 
+    alt: "Sagar" 
   },
   { 
-    name: "Michael Chen", 
-    role: "Lead Developer", 
-    img: "/assets/team-3.jpg", 
-    alt: "Team member 2" 
+    name: "Srishti", 
+    role: "Digital Marketing Executive", 
+    img: "/assets1/Team/Srishti Digital Marketing Executive.jpeg", 
+    alt: "Srishti" 
   },
   { 
-    name: "Jessica Wu", 
-    role: "Marketing Head", 
-    img: "/assets/team-4.jpg", 
-    alt: "Team member 3" 
-  },
-  { 
-    name: "David Miller", 
-    role: "UI/UX Designer", 
-    img: "/assets/team-5.jpg", 
-    alt: "Team member 4" 
-  },
-  { 
-    name: "Emily Ross", 
-    role: "Project Manager", 
-    img: "/assets/team-5.jpg", 
-    alt: "Team member 5" 
-  },
+    name: "Amandeep", 
+    role: "Video Editor & Graphic Designer", 
+    img: "/assets1/Team/Amandeep  Video Editor and Graphic Designer.jpeg", 
+    alt: "Amandeep" 
+  }
 ];
 
 const TeamSection = () => {

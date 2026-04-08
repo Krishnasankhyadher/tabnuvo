@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { authFetch } from "../../utils/auth";
 import { useNavigate } from "react-router-dom";
 import AdminLayout from "../../components/admin/Adminlayout";
 import {
@@ -21,6 +22,7 @@ export default function AdminDashboard() {
 
   // State
   const [blogCount, setBlogCount] = useState(0);
+  const [workCount, setWorkCount] = useState(0);
   const [pageCount, setPageCount] = useState(0);
   const [newsletterCount, setNewsletterCount] = useState(0);
   const [enquiryCount, setEnquiryCount] = useState(0);
@@ -32,7 +34,7 @@ export default function AdminDashboard() {
   // ✅ Helper
   async function safeFetchCount(url, setter) {
     try {
-      const res = await fetch(url);
+      const res = await authFetch(url);
       const data = await res.json();
       if (Array.isArray(data)) {
         setter(data.length);
@@ -53,6 +55,7 @@ export default function AdminDashboard() {
       setLoading(true);
       await Promise.all([
         safeFetchCount(`${API_BASE}/api/blogs`, setBlogCount),
+        safeFetchCount(`${API_BASE}/api/works`, setWorkCount),
         safeFetchCount(`${API_BASE}/api/pagemeta/count`, setPageCount),
         safeFetchCount(`${API_BASE}/api/newsletter`, setNewsletterCount),
         safeFetchCount(`${API_BASE}/api/enquiry`, setEnquiryCount),
@@ -72,6 +75,15 @@ export default function AdminDashboard() {
       color: "text-blue-600",
       bg: "bg-blue-50",
       border: "hover:border-blue-300/50",
+    },
+    {
+      label: "Total Works",
+      value: workCount,
+      route: "/admin/dashboard/works/read",
+      icon: Layout,
+      color: "text-orange-600",
+      bg: "bg-orange-50",
+      border: "hover:border-orange-300/50",
     },
     {
       label: "Static Pages",
@@ -181,16 +193,16 @@ export default function AdminDashboard() {
             <div className="absolute top-0 right-0 -mt-10 -mr-10 text-white/5">
               <Sparkles size={150} strokeWidth={1} />
             </div>
-            
+
             <div className="relative z-10 max-w-2xl">
               <div className="flex items-center gap-3 mb-3">
-                 <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
-                   <Sparkles size={20} className="text-yellow-300" fill="currentColor" />
-                 </div>
-                 <h3 className="text-xl font-bold">Boost Your SEO</h3>
+                <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
+                  <Sparkles size={20} className="text-yellow-300" fill="currentColor" />
+                </div>
+                <h3 className="text-xl font-bold">Boost Your SEO</h3>
               </div>
               <p className="text-blue-100 leading-relaxed">
-                Publishing fresh content is the best way to improve your search rankings. 
+                Publishing fresh content is the best way to improve your search rankings.
                 It looks like a great day to write something new!
               </p>
             </div>
