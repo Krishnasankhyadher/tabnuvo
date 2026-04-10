@@ -9,37 +9,28 @@ import { motion } from 'framer-motion';
 
 
 
-const smmFaqs = [
+const BussinessFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "What does business consulting involve?",
+    "answer": "It includes strategic planning, process improvement, market analysis, and growth strategies."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "How can consulting help my business grow?",
+    "answer": "It provides expert insights, identifies opportunities, and helps you make informed decisions for sustainable growth."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "Do you work with startups or established businesses?",
+    "answer": "We work with both—helping startups build foundations and established businesses scale further."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "What makes your consulting approach unique?",
+    "answer": "We focus on practical, results-driven strategies tailored to your specific business challenges and goals."
+  }
 ];
 
 const items = [
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Understanding How the Business Really Runs.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Without caring there can be no quality(business consulting).png",
     title: "Understanding How the Business Really Runs",
     description:
       "Consulting without understanding day-to-day operations is like giving fitness advice without seeing how someone moves. We start by getting a clear view of how the business actually functions."
@@ -57,7 +48,7 @@ const items = [
       "When roles are not clear, work overlaps or gets missed. We help define responsibilities, improve handovers, and align teams so everyone knows what they own."
   },
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Improving Systems & Decision-Making.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Improving Systems & Decision-Making(business cosluting).png",
     title: "Improving Systems & Decision-Making",
     description:
       "Running a business without the right systems is like tracking finances in your head. We help structure tools, reports, and processes that support better decisions."
@@ -108,9 +99,9 @@ At The Ad-ults, we offer a team of seasoned industry professionals who specializ
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="Business"
+          titleSecondLine="Consulting FAQs"
+          faqs={BussinessFaqs}
         />
       </div>
     </motion.div>

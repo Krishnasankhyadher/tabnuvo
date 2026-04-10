@@ -7,32 +7,23 @@ import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 
-const smmFaqs = [
+const BrandingFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "Why is branding important for my business?",
+    "answer": "Branding defines how your business is perceived. It builds trust, creates recognition, and helps you stand out in a competitive market."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "What does a complete branding package include?",
+    "answer": "It typically includes logo design, color palette, typography, brand guidelines, and communication tone to ensure consistency across all platforms."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "How long does the branding process take?",
+    "answer": "Depending on complexity, branding can take anywhere from 2 to 6 weeks, ensuring every element aligns with your vision."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "Can you rebrand an existing business?",
+    "answer": "Yes, we specialize in rebranding strategies that modernize your identity while retaining your brand’s core essence."
+  }
 ];
 
 const items = [
@@ -61,7 +52,7 @@ const items = [
       "A brand that keeps changing its look and message feels unreliable. From packaging to digital platforms, we ensure the brand shows up consistently. This repetition builds familiarity, and familiarity builds trust."
   },
   {
-    icon: "/assets1/Icons/Branding/Making Brands Easy to Remember.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Tell your story with us  icon(Branding).png",
     title: "Making Brands Easy to Remember",
     description:
       "Great brands don't shout but they stay with you. We focus on making brands memorable in a crowded space, whether it is through a strong idea, a distinct look, or a clear message."
@@ -107,9 +98,9 @@ In the current landscape, a sporadic post here and there won't suffice to make a
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="Branding"
+          titleSecondLine="FAQs"
+          faqs={BrandingFaqs}
         />
 
       </div>

@@ -174,8 +174,8 @@ const BlogsSection = () => {
             Blogs
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
-            <span className="block">IPSUM</span>
-            GENERATORS
+            <span className="block">Stay updated</span>
+            with us!
           </h2>
         </motion.div>
 

@@ -7,32 +7,23 @@ import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 
-const smmFaqs = [
+const ServicedesignFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "What is service design?",
+    "answer": "Service design focuses on improving the overall customer journey by aligning your business processes with user needs."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "Why is service design important?",
+    "answer": "It enhances customer satisfaction, improves efficiency, and creates seamless experiences that build long-term loyalty."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "What industries benefit from service design?",
+    "answer": "Hospitality, healthcare, retail, SaaS, and almost every service-based business can benefit from it."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "How do you approach service design?",
+    "answer": "We analyze user behavior, map journeys, identify gaps, and design solutions that improve both user experience and business performance."
+  }
 ];
 
 const items = [
@@ -43,13 +34,13 @@ const items = [
       "Designing a service by looking at only one touchpoint is like judging a movie by a single scene. We map the entire service journey to understand how people actually experience your brand."
   },
   {
-    icon: "/assets1/Icons/Service Design/Designing Clear & Thoughtful Journeys.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Creating Consistent Service Experiences icon (2)(Service Design).png",
     title: "Designing Clear & Thoughtful Journeys",
     description:
       "A service that feels confusing often has good intentions but poor flow. We design service journeys that feel logical and predictable, so customers always know what is happening."
   },
   {
-    icon: "/assets1/Icons/Service Design/Aligning People, Process & Systems.png",
+    icon: "/assets1/Tabnuvo Icons (2)/expand freely(Service Design).png",
     title: "Aligning People, Process & Systems",
     description:
       "Even the best teams struggle when processes are unclear. We align internal teams, workflows, and systems so everyone works together smoothly, creating a better experience for both customers and employees."
@@ -107,9 +98,9 @@ In the current landscape, a sporadic post here and there won't suffice to make a
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="Service Design"
+          titleSecondLine="FAQs"
+          faqs={ServicedesignFaqs}
         />
       </div>
     </motion.div>

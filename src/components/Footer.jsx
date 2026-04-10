@@ -67,13 +67,13 @@ export default function Footer() {
 
             {/* Social icons */}
             <div className="flex items-center gap-3 mt-5">
-              <a href="#" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1JsNv17oyd/" aria-label="Facebook">
                 <img src="/assets/icons/facebook.png" alt="facebook" className="h-6 w-6 hover:opacity-80 transition" />
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/tabnuvo/" aria-label="LinkedIn">
                 <img src="/assets/icons/linkedin.png" alt="linkedin" className="h-6 w-6 hover:opacity-80 transition" />
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/tabnuvo?igsh=Mzl0ZDQ2ZTg3dXN1" aria-label="Instagram">
                 <img src="/assets/icons/instagram.png" alt="instagram" className="h-6 w-6 hover:opacity-80 transition" />
               </a>
             </div>
@@ -115,7 +115,7 @@ export default function Footer() {
             <ul className="text-gray-800 text-[15px] space-y-3">
               <li className="flex items-center gap-3">
                 <img src="/assets/icons/phone.png" alt="phone" className="h-5 w-5" />
-                <span>+91 123456789</span>
+                <span>+91 92203 94526</span>
               </li>
 
               <li className="flex items-center gap-3">
@@ -185,7 +185,7 @@ export default function Footer() {
 
         {/* COPYRIGHT ROW */}
         <div className="mt-10 text-center text-gray-600 text-[13px]">
-          © {new Date().getFullYear()} Your Company • All rights reserved.
+          © {new Date().getFullYear()} Tabnuvo Pvt. Ltd. • All rights reserved.
         </div>
       </div>
     </footer>

@@ -7,43 +7,34 @@ import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 
-const smmFaqs = [
+const ProductdesignFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "What does product design include?",
+    "answer": "Product design covers ideation, prototyping, design aesthetics, usability, and functionality of a product."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "How does good product design impact sales?",
+    "answer": "A well-designed product enhances usability and appeal, increasing customer satisfaction and driving higher conversions."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "Do you design physical or digital products?",
+    "answer": "We work on both—ranging from packaging design to digital product interfaces."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "Can you help improve an existing product?",
+    "answer": "Yes, we refine and optimize existing products to enhance performance, usability, and market appeal."
+  }
 ];
 
 const items = [
   {
-    icon: "/assets1/Icons/Product Design/Understanding the Product & Its Users.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Making the Product Market-Ready icon (product design).png",
     title: "Understanding the Product & Its Users",
     description:
       "Designing a product without understanding its users is like serving soup with a fork. Before we design anything, we dig into what the product is meant to solve and who it is meant for."
   },
   {
-    icon: "/assets1/Icons/Product Design/Design That Works First.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Outgrow your product! icon(Product Design).png",
     title: "Design That Works First",
     description:
       "A beautiful product that is hard to use is like a door that looks stunning but won't open properly. Function always comes first. We focus on making interactions simple, logical, and intuitive."
@@ -108,9 +99,9 @@ In the current landscape, a sporadic post here and there won't suffice to make a
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="Product Design"
+          titleSecondLine="FAQs"
+          faqs={ProductdesignFaqs}
         />
 
 

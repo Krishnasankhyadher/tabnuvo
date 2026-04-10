@@ -9,32 +9,23 @@ import { motion } from 'framer-motion';
 
 
 
-const smmFaqs = [
+const EcommerceFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "What does e-commerce management include?",
+    "answer": "It includes product listing, inventory management, order processing, performance tracking, and marketing."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "Which platforms do you support?",
+    "answer": "We work with Amazon, Flipkart, Myntra, BlinkIt, Swiggy Instamart, Zepto and many other ecommerce and Quick Commerce platforms."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "How can e-commerce management improve sales?",
+    "answer": "By optimizing listings, managing operations efficiently, and running targeted campaigns to increase conversions."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "Do you handle customer support for e-commerce?",
+    "answer": "Yes, we can assist with customer queries, returns, and overall experience management."
+  }
 ];
 
 const items = [
@@ -108,9 +99,9 @@ At The Ad-ults, we offer a team of seasoned industry professionals who specializ
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="E-commerce"
+          titleSecondLine="Management FAQs"
+          faqs={EcommerceFaqs}
         />
 
       </div>

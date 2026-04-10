@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -7,68 +7,59 @@ import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 
-const smmFaqs = [
+const WebsiteDesignFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "What types of websites do you develop?",
+    "answer": "We create business websites, portfolios, landing pages, and custom web platforms tailored to your needs."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "How long does it take to develop a website?",
+    "answer": "Typically, it takes 2–8 weeks depending on the complexity and features required."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "Will my website be mobile-friendly?",
+    "answer": "Yes, all our websites are fully responsive and optimized for all devices."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "Do you provide website maintenance?",
+    "answer": "Yes, we offer ongoing support, updates, and performance optimization services."
+  }
 ];
 
 const items = [
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Understanding the Purpose First.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Understanding the Purpose First(Website development).png",
     title: "Understanding the Purpose First",
     description:
       "Building a website without a clear goal is like opening a store without deciding what you want to sell. Before development begins, we understand what the website is meant to achieve, whether it's generating leads, telling a brand story, or driving sales."
   },
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Structure That Makes Sense.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Make your website worthy of your business!(website development).png",
     title: "Structure That Makes Sense",
     description:
       "A website with poor structure is like a maze with no exit. We focus on building clean, logical structures that help visitors find what they're looking for quickly, without unnecessary clicks or distractions."
   },
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Performance & Responsiveness.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Performance & Responsiveness(website development).png",
     title: "Performance & Responsiveness",
     description:
       "A slow or broken website is like a shop that takes forever to open its doors. We develop websites that load fast, work smoothly across devices, and perform reliably because patience online is limited and first impressions are short."
   },
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Seamless Integration & Functionality.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Seamless Integration & Functionality(Website development).png",
     title: "Seamless Integration & Functionality",
     description:
       "A website isn't just a collection of pages, it's a working system. We ensure all forms, integrations, and functionalities work together seamlessly to support your business goals."
   },
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Understanding the Purpose First.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Secure, Scalable & Easy to Manageicon (website design).png",
     title: "Secure, Scalable & Easy to Manage",
     description:
       "A website should grow with your business, not hold it back. We build websites that are secure, scalable, and easy to manage, so updates don't feel like a technical headache and growth doesn't require starting from scratch."
   },
   {
     icon: "/assets1/Icons/TABNUVO ICONS/Structure That Makes Sense.png",
-    title: "Make your website worthy of your business!",
+    title: "CRM Web Softwares do this",
     description:
       "Your website shouldn't just exist online, it should work for your business. We build websites that are clear, fast, and built to perform."
   }
@@ -107,9 +98,9 @@ const WebsiteDesign = () => {
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="Website"
+          titleSecondLine="Development FAQs"
+          faqs={WebsiteDesignFaqs}
         />
 
       </div>

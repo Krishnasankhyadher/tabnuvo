@@ -9,37 +9,28 @@ import { motion } from 'framer-motion';
 
 
 
-const smmFaqs = [
+const ContentFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "What is content management?",
+    "answer": "It involves creating, organizing, updating, and optimizing content across your digital platforms."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "Why is content important for my business?",
+    "answer": "Effective communication is the key to efficient business. With good content management you can communicate your vision and mission as well as details about your products and services effectively."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "What type of content do you manage?",
+    "answer": "We handle website content, blogs, social media, product descriptions, and marketing materials."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "Do you provide content strategy as well?",
+    "answer": "Yes, we create data-driven content strategies aligned with your brand goals."
+  }
 ];
 
 const items = [
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Knowing What to Say & When.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Content with purpose(content managment).png",
     title: "Knowing What to Say & When",
     description:
       "Posting content without a plan is like speaking in a meeting without knowing the agenda. We start by defining what needs to be said, when it should be said, and why it matters."
@@ -63,7 +54,7 @@ const items = [
       "Creative content is great, but only when it is relevant. Chasing every trend can dilute the message, while ignoring trends can make content feel dated. We strike a balance."
   },
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Reviewing, Refining & Improving.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Reviewing, Refining & Improving(content management).png",
     title: "Reviewing, Refining & Improving",
     description:
       "Content is not a one-time task, it is an ongoing process. Like pruning a plant, regular reviews help content grow better. We track performance, refine what works, and improve what doesn't."
@@ -108,9 +99,9 @@ At The Ad-ults, we offer a team of seasoned industry professionals who specializ
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="Content"
+          titleSecondLine="Management FAQs"
+          faqs={ContentFaqs}
         />
       </div>
     </motion.div>

@@ -8,43 +8,34 @@ import Navbar from '../components/Navbar';
 
 import { motion } from 'framer-motion';
 
-const smmFaqs = [
+const SoftwaredevlopmentFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "What kind of software solutions do you offer?",
+    "answer": "We develop custom software, SaaS platforms, automation tools, and enterprise solutions."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "Can you build software tailored to my business needs?",
+    "answer": "Absolutely. We specialize in custom-built solutions aligned with your specific requirements."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "How do you ensure software quality?",
+    "answer": "We follow rigorous testing, quality checks, and performance optimization throughout the development process."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "Do you provide post-launch support?",
+    "answer": "Yes, we offer maintenance, updates, and technical support after deployment."
+  }
 ];
 
 const items = [
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Understanding the Problem First.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Tested, Secure & Ready to Use(software development).png",
     title: "Understanding the Problem First",
     description:
       "Building software without understanding the problem is like installing an elevator where stairs would have worked better. Before writing a single line of code, we focus on what the software is meant to solve and who it is meant for."
   },
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Functionality That Feels Natural.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Make your software worthy of your business!(software development).png",
     title: "Functionality That Feels Natural",
     description:
       "Good software should not need a manual. If users have to figure it out, something is off. We design and develop software that feels intuitive, where flows make sense and actions feel obvious."
@@ -106,9 +97,9 @@ const Softwaredevlopment = () => {
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="Software"
+          titleSecondLine="Development FAQs"
+          faqs={SoftwaredevlopmentFaqs}
         />
 
       </div>

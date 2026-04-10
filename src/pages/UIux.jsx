@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -7,43 +7,34 @@ import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 
-const smmFaqs = [
+const UIuxFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "What is the difference between UI and UX?",
+    "answer": "UI (User Interface) focuses on visual design, while UX (User Experience) ensures the product is easy and enjoyable to use."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "Why is UI/UX important for my website or app?",
+    "answer": "It improves usability, reduces bounce rates, and increases conversions by delivering a smooth user journey."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "How do you ensure a user-friendly design?",
+    "answer": "We conduct user research, create wireframes, test prototypes, and continuously optimize based on feedback."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "Do you redesign existing websites/apps?",
+    "answer": "Yes, we analyze current performance and redesign interfaces to improve engagement and usability."
+  }
 ];
 
 const items = [
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Understanding Users Before Screens.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Tested, Refined & Ready icon (UIUX Design).png",
     title: "Understanding Users Before Screens",
     description:
       "Designing screens without understanding users is like arranging furniture without knowing the room size. We start by studying user behaviour, needs, and expectations, so every interface decision is grounded in how people actually think and move through a product."
   },
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Clear & Intuitive User Flows.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Make your website worthy of your business!icon (UIUX Design).png",
     title: "Clear & Intuitive User Flows",
     description:
       "A confusing journey can make even the best product feel broken. We focus on creating logical, seamless flows that guide users naturally from one step to the next, making interactions feel smooth and effortless."
@@ -68,7 +59,7 @@ const items = [
   },
   {
     icon: "/assets1/Icons/TABNUVO ICONS/Clear & Intuitive User Flows.png",
-    title: "Make your website worthy of your business!",
+    title: "CRM Web Softwares do this",
     description:
       "Your Website/app is your Showroom! If your homepage is your front desk, every line, paragraph and button is your employee, every picture is your product/service."
   }
@@ -107,9 +98,9 @@ const UIux = () => {
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="UI/UX Design"
+          titleSecondLine="FAQs"
+          faqs={UIuxFaqs}
         />
 
       </div>

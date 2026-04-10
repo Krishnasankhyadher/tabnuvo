@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import Hero from '../components/Hero'
 import PostingSection from '../components/Design'
 import SocialMediaMagic from '../components/Compo'
@@ -38,13 +38,13 @@ const smmFaqs = [
 
 const items = [
   {
-    icon: "/assets1/Icons/Social Media Marketing/Platform analysis and prioritizing.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Meta Ads(social media).png",
     title: "Platform analysis and prioritizing",
     description:
       "Consider someone having lunch while sitting in a bathtub – not exactly a flattering sight, is it? Similarly, prioritizing specific social media platforms for your business and tailoring your content accordingly can capture the attention of your audience, generate engagement and helps you generate business."
   },
   {
-    icon: "/assets1/Icons/Social Media Marketing/Strategic Content Creation.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Meme Marketing(social media marketing).png",
     title: "Strategic Content Creation",
     description:
       "Beyond mere icons, images, and text, we adopt a comprehensive approach to content creation. By utilizing the influence of shape, typography, and color psychology, we breathe vitality into our designs, ensuring they authentically reflect the brand's vision."
@@ -57,19 +57,19 @@ const items = [
   },
   {
     icon: "/assets1/Icons/Social Media Marketing/Social Media Campaigns.png",
-    title: "Social Media Campaigns",
+    title: "Strategic pathway with Analytics",
     description:
       "Social media campaigns is all about targeting that emotion and building on it. We craft campaigns that stand apart from the crowd, are catchy and are sure to give life to your brand. Our 12+ years of content experience helps us in having a strong understanding of people’s emotions."
   },
   {
     icon: "/assets1/Icons/Social Media Marketing/Platform analysis and prioritizing.png",
-    title: "Meta Ads",
+    title: "Technical SEO",
     description:
       "Our team of Meta Ads specialists can help you reach your target audience with precise targeting, captivating ad formats, and detailed analytics. Whether you aim to enhance brand visibility, boost website traffic, or generate leads, we craft impactful Facebook ad campaigns that deliver results."
   },
   {
     icon: "/assets1/Icons/Social Media Marketing/Strategic Content Creation.png",
-    title: "Meme Marketing",
+    title: "Non AI blogs",
     description:
       "This one is fun! See the rhyming there? Standing beyond the regular marketing techniques, this form of marketing can be utilised to sneak in your brand so quietly that people won’t even know what hit them! It's one of the most successful ways of marketing because of one simple reason - everyone loves memes!"
   }

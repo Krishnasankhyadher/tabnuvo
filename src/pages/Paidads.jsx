@@ -6,43 +6,34 @@ import Contact from "../components/Contact";
 import FAQSection from '../components/Faq';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
-const smmFaqs = [
+const PaidadsFaqs = [
   {
-    question: "Does social media marketing work?",
-    answer:
-      "Yes. When done strategically, social media marketing helps build brand awareness, drive traffic, and generate leads by engaging the right audience consistently.",
+    "question": "Where Can You Advertise With PPC Ads?",
+    "answer": "Also known as Pay-Per-Click, PPC is offered by the social networks like Facebook and Twitter in the form of Facebook and Twitter ads, search engines like Google as Google ads."
   },
   {
-    question: "Can you guarantee results?",
-    answer:
-      "No one can guarantee exact numbers, but we use data-driven strategies, A/B testing, and constant optimization to maximize performance.",
+    "question": "Do People Really Click On Online PPC Ads?",
+    "answer": "People do click on paid ads if the product or service interests them. For each ad clicked, the marketer ought to pay the search engine."
   },
   {
-    question: "How long before I see results?",
-    answer:
-      "You usually start seeing early signals within a few weeks, while strong, consistent results typically come in 3–6 months.",
+    "question": "What businesses can/ should advertise online?",
+    "answer": "Irrespective of domains, both SMEs and MNCs can run PPC campaigns to drive traffic and generate potential leads to reach out to real-time audiences and flourish their ROI."
   },
   {
-    question: "Do I need to be on every platform?",
-    answer:
-      "Not at all. We identify where your audience actually spends time and focus your efforts there for better ROI.",
-  },
-  {
-    question: "Can you handle content creation too?",
-    answer:
-      "Yes, we can handle creatives, copy, calendars, and publishing so your brand stays consistent and active.",
-  },
+    "question": "Why Advertise With Pay-per-click Ads?",
+    "answer": "The PPC model has had a record of generating huge traffic and potential lead conversions by advertising products and/or services to a targeted group of people who are searching them with certain keywords."
+  }
 ];
 
 const items = [
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Starting with the Right Objective.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Tracking, Learning & Optimising(paid add).png",
     title: "Starting with the Right Objective",
     description:
       "Running ads without a clear goal is like shouting into a crowd without knowing who you are calling out to. Before launching anything, we define what success looks like, so every ad has a purpose, not just a budget behind it."
   },
   {
-    icon: "/assets1/Icons/TABNUVO ICONS/Targeting That Actually Makes Sense.png",
+    icon: "/assets1/Tabnuvo Icons (2)/Discipline your ad account with(paid ads).png",
     title: "Targeting That Actually Makes Sense",
     description:
       "Showing the right ad to the wrong person is like offering dessert before the meal. We focus on precise audience targeting based on behaviour, intent, and relevance."
@@ -105,9 +96,9 @@ At The Ad-ults, we offer a team of seasoned industry professionals who specializ
         <Contact />
         <FAQSection
           eyebrow="FAQs"
-          title="Social Media"
-          titleSecondLine="Marketing FAQs"
-          faqs={smmFaqs}
+          title="Paid Ads"
+          titleSecondLine="FAQs"
+          faqs={PaidadsFaqs}
         />
 
       </div>

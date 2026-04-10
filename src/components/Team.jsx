@@ -1,6 +1,13 @@
 import React from "react";
 
 const team = [
+   { 
+    name: "RAJ", 
+    role: "Founder & CEO", 
+    img: "/assets1/Team/Raj.png", 
+    alt: "RAJ",
+    imgClass: "object-cover object-top"
+  },
   { 
     name: "Avinash", 
     role: "Partner", 
@@ -49,7 +56,7 @@ const TeamSection = () => {
             <img
               src={item.img}
               alt={item.alt}
-              className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
+              className={`w-full h-full transition-transform duration-700 md:group-hover:scale-110 ${item.imgClass || 'object-cover'}`}
             />
 
             {/* OVERLAY WRAPPER 
