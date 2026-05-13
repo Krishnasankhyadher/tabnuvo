@@ -19,7 +19,7 @@ const Work = () => {
       
       {/* Reusing the Hero component */}
       <Hero
-        bgImage="/assets/contact.png"
+        bgImage="/assets1/Compressed Banner/Work.png"
         overlayImage="/assets/work.png"
         />
       

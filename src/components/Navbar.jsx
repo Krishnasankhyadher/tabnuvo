@@ -31,7 +31,7 @@ export default function Navbar() {
       }`}
     >
       {/* MAIN NAV */}
-      <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12 lg:px-20">
         <div className="flex items-center justify-between h-20">
 
           {/* LOGO */}

@@ -10,10 +10,10 @@ export default function Contactsection() {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-white h-full flex flex-col justify-between py-8">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 text-white h-full flex flex-col justify-between py-8">
         {/* Top: big heading */}
-        <div className="flex-1 flex items-center justify-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide text-center">
+        <div className="flex-1 flex items-center justify-start">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide text-left">
             CONTACT US
           </h2>
         </div>
@@ -25,7 +25,7 @@ export default function Contactsection() {
 
           {/* text row */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 py-3 text-sm sm:text-base">
-            <p className="font-medium text-center sm:text-left">
+            <p className="font-medium text-left">
               Let’s make big things happen
             </p>
 

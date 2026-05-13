@@ -160,7 +160,7 @@ const BlogsSection = () => {
 
   return (
     <section className="bg-white py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="w-full px-6 md:px-12 lg:px-20">
 
         {/* Heading */}
         <motion.div 
@@ -187,8 +187,8 @@ const BlogsSection = () => {
           variants={staggerContainer}
           className="space-y-4"
         >
-          {topBlogs.map(blog => (
-            <BlogRowCard key={blog.slug} blog={blog} />
+          {topBlogs.map((blog, idx) => (
+            <BlogRowCard key={blog.slug || blog._id || idx} blog={blog} />
           ))}
         </motion.div>
 
@@ -198,7 +198,7 @@ const BlogsSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="mt-12 text-center"
+          className="mt-12 text-left"
         >
           <button
             onClick={() => navigate("/blogs")}

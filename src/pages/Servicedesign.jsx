@@ -77,15 +77,15 @@ const Servicedesign = () => {
       <div>
         <Navbar />
         <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/Service Design (1).png"
                         overlayImage="/assets1/Overlay/service design.png"
                     />
         <PostingSection
           images={[
-            "/assets1/IMAGES1/Service Design1.jpg",
-            "/assets1/IMAGES1/Service Design2.jpg",
-            "/assets1/IMAGES1/Service Design3.jpg",
-            "/assets1/IMAGES1/brand and experience.jpg",
+            "/assets1/Compressed images/Service Design 1st Image.jpg",
+            "/assets1/Compressed images/Service Design 2nd Image.jpg",
+            "/assets1/Compressed images/Service Design 3rd Image.jpg",
+            "/assets1/Compressed images/Service Design 4.jpg",
           ]}
           heading="PLAN AHEAD AND OPERATE SMOOTHLY!"
           text="In today's era of Social Media prevalence, platforms like Instagram boast approximately 2 billion active mobile users, constituting about 28% of the global population, with its primary user base being young adults aged 18-34. Twitter emerges as one of the most vibrant social media platforms, witnessing active engagement from brands, leaders, and celebrities. Meanwhile, LinkedIn remains unrivaled as the leading professional networking platform.

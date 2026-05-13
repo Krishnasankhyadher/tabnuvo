@@ -3,7 +3,7 @@ import React from "react";
 const PostingSection = ({ images, heading, text }) => {
   return (
     <section className="w-full bg-white py-20">
-      <div className="max-w-7xl mx-auto px-4 md:px-10 grid md:grid-cols-2 gap-12 items-center">
+      <div className="w-full px-6 md:px-12 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT IMAGE COLLAGE */}
         <div className="w-full">

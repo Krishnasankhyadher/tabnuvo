@@ -243,7 +243,7 @@ const WorkDetailPage = () => {
 
       {/* --- FOOTER NAV --- */}
       <div className="bg-gray-50 border-t border-gray-200 py-24 px-6">
-         <div className="max-w-screen-xl mx-auto flex flex-col items-center text-center">
+         <div className="max-w-screen-xl mx-auto flex flex-col items-start text-left">
             <p className="text-gray-400 uppercase tracking-[0.2em] text-sm mb-6">Explore More</p>
             <Link to="/work" className="group text-xl md:text-3xl font-bold text-gray-900 inline-flex items-center gap-6 hover:text-green-800 transition-colors">
                View All Projects 

@@ -65,12 +65,12 @@ const TeamSection = () => {
             */}
             <div className="absolute inset-0 flex flex-col transition-all duration-300
                             justify-end p-4 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-100
-                            md:justify-center md:items-center md:bg-[#2f6c5f]/95 md:from-transparent md:to-transparent md:opacity-0 md:group-hover:opacity-100">
+                            md:justify-center md:items-start md:bg-[#2f6c5f]/95 md:from-transparent md:to-transparent md:opacity-0 md:group-hover:opacity-100">
               
               {/* Text Container */}
               <div className="transform transition-transform duration-300 
                               translate-y-0 text-left
-                              md:translate-y-4 md:group-hover:translate-y-0 md:text-center">
+                              md:translate-y-4 md:group-hover:translate-y-0 md:text-left">
                 
                 <h3 className="text-white text-lg md:text-2xl font-bold tracking-wide leading-tight">
                   {item.name}

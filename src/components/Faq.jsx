@@ -20,7 +20,7 @@ const FAQSection = ({
 
   return (
     <section
-      className={`w-full px-4 md:px-12 lg:px-20 py-10 bg-white border-b-4 border-green-200 text-left ${className}`}
+      className={`w-full px-6 md:px-12 lg:px-20 py-10 bg-white border-b-4 border-green-200 text-left ${className}`}
     >
       {/* Heading */}
       <div className="mb-8">

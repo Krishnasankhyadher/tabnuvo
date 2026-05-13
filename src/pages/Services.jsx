@@ -1,4 +1,4 @@
-﻿// Services.jsx
+// Services.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
@@ -62,7 +62,7 @@ const ServicesSection = () => {
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
 
-      <div className="max-w-6xl mx-auto px-4 mt-10 mb-10">
+      <div className="w-full px-6 md:px-12 lg:px-20 mt-10 mb-10">
         {/* MOBILE LAYOUT (like your screenshot) */}
         <div className="space-y-6 md:hidden">
           {serviceList.map((item, idx) => (
@@ -124,7 +124,7 @@ const ServicesSection = () => {
               </div>
 
               {/* Right: links */}
-              <div className="mt-4 md:mt-0 flex flex-col space-y-2 justify-start text-gray-900 text-left">
+              <div className="mt-4 md:mt-0 flex flex-col space-y-2 justify-center items-center text-gray-900 text-center">
                 {item.links.map((link) => (
                   <Link
                     key={link.label}
@@ -155,7 +155,7 @@ const Services = () => {
       <div>
         <Navbar />
         <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/Services.png"
                         overlayImage="/assets1/Overlay/services.png"
                     />
         <ServicesSection />

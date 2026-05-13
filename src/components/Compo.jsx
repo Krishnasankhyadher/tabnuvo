@@ -3,7 +3,7 @@ import React from "react";
 const SocialMediaCard = ({ icon, title, description }) => {
   return (
     <div className="relative bg-[#CCE0DB] rounded-[24px] px-10 pt-14 pb-10 shadow-sm">
-      {/* circular icon overlapping top edge */}
+      {/* circular icon overlapping top edge, center-aligned */}
       <div className="absolute -top-9 left-1/2 -translate-x-1/2 w-18 h-18 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-sm border-4 border-white">
         <img
           src={icon}
@@ -12,10 +12,10 @@ const SocialMediaCard = ({ icon, title, description }) => {
         />
       </div>
 
-      <h3 className="text-center font-semibold text-lg md:text-xl mb-3">
+      <h3 className="text-left font-semibold text-lg md:text-xl mb-3">
         {title}
       </h3>
-      <p className="text-center text-sm md:text-[15px] leading-relaxed text-gray-600">
+      <p className="text-left text-sm md:text-[15px] leading-relaxed text-gray-600">
         {description}
       </p>
     </div>
@@ -28,7 +28,7 @@ const SocialMediaMagic = ({ sectionTitle, items }) => {
 
   return (
     <section className="w-full bg-white py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12 lg:px-20">
         {/* main heading */}
         <h2 className="text-xl md:text-2xl font-bold mb-12 uppercase tracking-wider text-gray-800">
           {sectionTitle}

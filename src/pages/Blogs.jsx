@@ -38,10 +38,10 @@ const Blogs = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <Hero bgImage="/assets/contact.png" overlayImage="/assets/blg.png" />
+      <Hero bgImage="/assets1/Compressed Banner/Blogs.png" overlayImage="/assets/blg.png" />
 
       {/* Main Content Area */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="w-full px-6 md:px-12 lg:px-20 py-16">
         
         {/* --- LOADING SKELETON --- */}
         {loading && (

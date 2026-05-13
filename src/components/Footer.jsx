@@ -55,7 +55,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-[#e7f0ea] border-t border-black/10 py-12">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16">
           {/* LOGO + TEXT */}
           <div>
@@ -184,7 +184,7 @@ export default function Footer() {
         </div>
 
         {/* COPYRIGHT ROW */}
-        <div className="mt-10 text-center text-gray-600 text-[13px]">
+        <div className="mt-10 text-left text-gray-600 text-[13px]">
           © {new Date().getFullYear()} Tabnuvo Pvt. Ltd. • All rights reserved.
         </div>
       </div>

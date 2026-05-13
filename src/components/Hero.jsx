@@ -11,7 +11,7 @@ export default function Hero({ bgImage, overlayImage }) {
         bg-center bg-cover
         flex items-center justify-center
       "
-      style={{ backgroundImage: `url(${bgImage})` }}
+      style={{ backgroundImage: `url('${bgImage}')` }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60"></div>

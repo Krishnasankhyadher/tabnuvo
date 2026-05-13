@@ -79,15 +79,15 @@ const Bussiness = () => {
       <div>
         <Navbar />
         <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/Services.png"
                         overlayImage="/assets1/Overlay/Business consulting.png"
                     />
         <PostingSection
           images={[
-            "/assets1/IMAGES1/BUSINESS CONSULTING1.jpg",
-            "/assets1/IMAGES1/BUSINESS CONSULTING2.jpg",
-            "/assets1/IMAGES1/BUSINESS CONSULTING3.jpg",
-            "/assets1/IMAGES1/Business Strategy.jpg",
+            "/assets1/Compressed images/BUSINESS CONSULTING1.jpg",
+            "/assets1/Compressed images/BUSINESS CONSULTING2.jpg",
+            "/assets1/Compressed images/BUSINESS CONSULTING3.jpg",
+            "/assets1/Compressed images/Business Strategy Banner.jpg",
           ]}
           heading="WITHOUT CARING THERE CAN BE NO QUALITY"
           text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.

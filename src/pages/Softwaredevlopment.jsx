@@ -77,15 +77,15 @@ const Softwaredevlopment = () => {
       <div>
         <Navbar />
         <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/Software Development.png"
                         overlayImage="/assets1/Overlay/software devlopment.png"
                     />
         <PostingSection
           images={[
-            "/assets1/IMAGES1/Software Developmement1.jpg",
-            "/assets1/IMAGES1/software development2.jpg",
-            "/assets1/IMAGES1/Software Development3.jpg",
-            "/assets1/IMAGES1/Software Development4.jpg",
+            "/assets1/Compressed images/Software Developmement1.jpg",
+            "/assets1/Compressed images/software development2.jpg",
+            "/assets1/Compressed images/Software Development3.jpg",
+            "/assets1/Compressed images/Software Development4.jpg",
           ]}
           heading="WE BUILD WITH INTENT, DELIVER ON TIMELINE"
           text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.

@@ -31,11 +31,11 @@ const GallerySection = () => {
   }
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16">
+    <section className="w-full px-6 md:px-12 lg:px-20 py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         
         {projects.length === 0 ? (
-          <div className="col-span-1 md:col-span-2 text-center py-20 text-gray-500">
+          <div className="col-span-1 md:col-span-2 text-left py-20 text-gray-500">
             No projects available yet.
           </div>
         ) : (

@@ -173,7 +173,7 @@ const HeroBottom = () => {
   return (
     <div
       className="w-full h-[260px] md:h-[380px] flex items-center justify-center bg-cover bg-center relative"
-      style={{ backgroundImage: `url('/assets/back.jpg')` }}
+      style={{ backgroundImage: "url('/assets1/Compressed Banner/Contact us.png')" }}
     >
       <div className="absolute inset-0 bg-black/20" />
       <h1 className="relative text-black text-2xl md:text-4xl font-bold text-center px-4">
@@ -193,7 +193,7 @@ const Contact = () => {
     >
       <div className="w-full overflow-x-hidden">
         <Navbar />
-        <Hero bgImage="/assets/contact.png" overlayImage="/assets/get.png" />
+        <Hero bgImage="/assets1/Compressed Banner/Contact us.png" overlayImage="/assets/get.png" />
         <ContactSection />
         <HeroBottom />
       </div>

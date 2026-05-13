@@ -87,15 +87,15 @@ const SocialMedia = () => {
       <div>
         <Navbar />
         <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/Social Media Marketing.png"
                         overlayImage="/assets1/Overlay/social media marketing.png"
                     />
         <PostingSection
           images={[
-            "/assets1/IMAGES1/SOCIAL MEDIA 1.jpg",
-            "/assets1/IMAGES1/SOCIAL MEDIA2.jpg",
-            "/assets1/IMAGES1/SOCIAL MEDIA3.jpg",
-            "/assets1/IMAGES1/SOCIAL MEDIA4.jpg",
+            "/assets1/Compressed images/SOCIAL MEDIA 1 (1).jpg",
+            "/assets1/Compressed images/SOCIAL MEDIA2.jpg",
+            "/assets1/Compressed images/SOCIAL MEDIA3.jpg",
+            "/assets1/Compressed images/SOCIAL MEDIA4.jpg",
           ]}
           heading="LET'S CREATE YOUR CULT"
           text="Another day, another trend, and still no views? You are not alone! But you are doing it wrong along with everyone else. Hopping on every trend will not get you clients. Finding what your audience wants and delivering it will. Want to know how?" />

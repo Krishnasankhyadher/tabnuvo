@@ -78,15 +78,15 @@ const UIux = () => {
       <div>
         <Navbar />
         <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/UIUX Design.png"
                         overlayImage="/assets1/Overlay/ui ux design.png"
                     />
         <PostingSection
           images={[
-            "/assets1/IMAGES1/UIUX Design1.jpg",
-            "/assets1/IMAGES1/UIUX Design2.jpg",
-            "/assets1/IMAGES1/UIUX Design3.jpg",
-            "/assets1/IMAGES1/UIUX Design4.jpg",
+            "/assets1/Compressed images/UIUX Design1.jpg",
+            "/assets1/Compressed images/UIUX Design2.jpg",
+            "/assets1/Compressed images/UIUX Design3.jpg",
+            "/assets1/Compressed images/UIUX Design4.jpg",
           ]}
           heading="YOUR WEBSITE/APP IS YOUR SHOWROOM!"
           text="In today's digitally driven world, where Google registers over 8.5 billion searches daily, the shift towards online commerce is undeniable. Whether it's groceries or automobiles, consumers can now conveniently order anything from the comfort of their homes. As a business owner, it's natural to wonder how to thrive in this digital landscape.

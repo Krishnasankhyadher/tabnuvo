@@ -68,7 +68,7 @@ const BlogDetailPage = () => {
       <div className="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
         <div className="flex-1 flex flex-col items-center justify-center p-4">
-          <div className="text-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100 max-w-md w-full">
+          <div className="text-left bg-white p-8 rounded-2xl shadow-sm border border-gray-100 max-w-md w-full">
             <h2 className="text-xl font-bold text-gray-800 mb-2">Blog Post Not Found</h2>
             <Link to="/blogs" className="text-[#2f6c5f] underline">Back to Blogs</Link>
           </div>
@@ -105,7 +105,7 @@ const BlogDetailPage = () => {
 
     <div className="min-h-screen bg-white font-sans text-gray-900">
       <Navbar />
-      <Hero bgImage="/assets/contact.png" overlayImage="/assets/blg.png" />
+      <Hero bgImage="/assets1/Compressed Banner/Blogs.png" overlayImage="/assets/blg.png" />
 
       {/* UPDATED: Changed max-w-4xl to max-w-6xl
         This makes the content area significantly wider.

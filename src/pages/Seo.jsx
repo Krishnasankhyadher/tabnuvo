@@ -77,15 +77,15 @@ const Seo = () => {
       <div>
         <Navbar />
         <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/SEO.png"
                         overlayImage="/assets1/Overlay/search engine optimization.png"
                     />
         <PostingSection
           images={[
-            "/assets1/IMAGES1/SEO1.jpg",
-            "/assets1/IMAGES1/SEO2.jpg",
-            "/assets1/IMAGES1/SEO3.jpg",
-            "/assets1/IMAGES1/SEO4.jpg",
+            "/assets1/Compressed images/SEO1.jpg",
+            "/assets1/Compressed images/SEO2.jpg",
+            "/assets1/Compressed images/SEO3.jpg",
+            "/assets1/Compressed images/SEO3.jpg",
           ]}
           heading="GETTING YOU AT THE RIGHT POSITION"
           text="Imagine you want to buy the new iPhone on the first day and you reach the store before everyone else, BUT, you are in front of the Samsung store. This can be your website in Google ranking, Ranking 1st, but on the wrong search page. Reach the right search page with us. With the right people!" />

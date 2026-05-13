@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { animate, useInView } from "framer-motion";
 import Hero from '../components/Hero.jsx';
 import ServicesSection from '../components/Services.jsx';
@@ -7,9 +7,9 @@ import Navbar from '../components/Navbar.jsx';
 import { motion } from 'framer-motion';
 
 const aboutImages = [
-    "/assets1/IMAGES1/about us1.jpg",
-    "/assets1/IMAGES1/about us2.jpg",
-    "/assets1/IMAGES1/about us3.jpg",
+    "/assets1/Compressed images/About us big image1.jpg",
+    "/assets1/Compressed images/About us big image2.jpg",
+    "/assets1/Compressed images/about us3.jpg",
 ];
 
 // --- COUNTER COMPONENT ---
@@ -47,15 +47,10 @@ function AboutSection() {
             transition={{ duration: 0.35, ease: "easeOut" }}
         >
 
-            <section id="about" className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+            <section id="about" className="w-full px-6 md:px-12 lg:px-20 py-16 lg:py-24">
                 <div className="grid gap-10 lg:grid-cols-12">
-                    {/* BIG IMAGE + HEADING SIDE */}
+                    {/* BIG IMAGE SIDE */}
                     <div className="lg:col-span-7">
-                        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">
-                            <span className="block">DESIGN</span>
-                            INNOVATORS
-                        </h2>
-
                         {/* BIG image block */}
                         <div className="mt-6 max-w-xl">
                             <div className="grid grid-cols-2 grid-rows-2 gap-3 h-[320px] md:h-[360px]">
@@ -81,9 +76,13 @@ function AboutSection() {
                         </div>
                     </div>
 
-                    {/* TEXT SIDE – pushed to LOWER side */}
-                    <div className="lg:col-span-5 flex lg:items-end">
+                    {/* TEXT SIDE */}
+                    <div className="lg:col-span-5 flex lg:items-center">
                         <div className="text-gray-800 space-y-4 text-sm sm:text-base">
+                            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+                                <span className="block">DESIGN</span>
+                                INNOVATORS
+                            </h2>
                             <p>
                                 In the era of &quot;AI can create anything&quot;, we focus on the human touch of imperfectly perfect. We are design innovators.
                             </p>
@@ -100,7 +99,7 @@ function AboutSection() {
                 {/* --- STATS BAR (FIXED) --- */}
                 <div className="w-full bg-[#cfe7df] rounded-md py-8 px-4 mt-14">
                     {/* Changed to grid-cols-2 on mobile so text fits better */}
-                    <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 md:divide-x divide-black text-center">
+                    <div className="w-full px-6 md:px-12 lg:px-20 grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 md:divide-x divide-black text-left">
 
                         {/* Item 1 */}
                         <div className="py-2">
@@ -152,7 +151,7 @@ const About = () => {
                 <main>
                     <Navbar />
                     <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/About Us.png"
                         overlayImage="/assets1/Overlay/about us.png"
                     />
                     <AboutSection />

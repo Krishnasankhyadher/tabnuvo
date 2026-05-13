@@ -77,15 +77,15 @@ const Branding = () => {
       <div>
         <Navbar />
         <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/Branding.png"
                         overlayImage="/assets1/Overlay/branding.png"
                     />
         <PostingSection
           images={[
-            "/assets1/IMAGES1/Branding page1.jpg",
-            "/assets1/IMAGES1/Branding page 2.jpg",
-            "/assets1/IMAGES1/Branding page3.jpg",
-            "/assets1/IMAGES1/Branding page Image 3.jpg",
+            "/assets1/Compressed images/Branding page1.jpg",
+            "/assets1/Compressed images/Branding page 2.jpg",
+            "/assets1/Compressed images/Branding page3.jpg",
+            "/assets1/Compressed images/Branding page Image 3.jpg",
           ]}
           heading="TELL YOUR STORY, YOUR WAY!"
           text="In today's era of Social Media prevalence, platforms like Instagram boast approximately 2 billion active mobile users, constituting about 28% of the global population, with its primary user base being young adults aged 18-34. Twitter emerges as one of the most vibrant social media platforms, witnessing active engagement from brands, leaders, and celebrities. Meanwhile, LinkedIn remains unrivaled as the leading professional networking platform.

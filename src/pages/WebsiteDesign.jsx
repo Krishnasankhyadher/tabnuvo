@@ -78,15 +78,15 @@ const WebsiteDesign = () => {
       <div>
         <Navbar />
         <Hero
-                        bgImage="/assets1/background.png"
+                        bgImage="/assets1/Compressed Banner/Website Development.png"
                         overlayImage="/assets1/Overlay/website design and devlopment.png"
                     />
         <PostingSection
           images={[
-            "/assets1/IMAGES1/Website Development1.jpg",
-            "/assets1/IMAGES1/Website Development2.jpg",
-            "/assets1/IMAGES1/Website Development3.jpg",
-            "/assets1/IMAGES1/Website Development4.jpg",
+            "/assets1/Compressed images/Website Development1.jpg",
+            "/assets1/Compressed images/Website Development2.jpg",
+            "/assets1/Compressed images/Website Development3.jpg",
+            "/assets1/Compressed images/Website Development4.jpg",
           ]}
           heading="YOUR DIGITAL SHOP NEEDS TO STAND OUT"
           text="In the Modern era of Digitalisation, your web address is more important for your business than your physical address. Your business is analyzed, judged, and valued by your clients as well as your potential investors based on your website. Whether you work in B2B, B2C, or D2C. Your website can make or break your impression.

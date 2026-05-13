@@ -9,9 +9,9 @@ import Navbar from "../components/Navbar";
 
 // --- ASSETS & DATA ---
 const aboutImages = [
-  "/assets1/IMAGES1/about us1.jpg",
-  "/assets1/IMAGES1/about us2.jpg",
-  "/assets1/IMAGES1/about us3.jpg",
+  "/assets1/Compressed images/About us big image1.jpg",
+  "/assets1/Compressed images/About us big image2.jpg",
+  "/assets1/Compressed images/about us3.jpg",
 ];
 
 
@@ -75,26 +75,11 @@ function AboutSection() {
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
 
-      <section id="about" className="max-w-7xl mx-auto px-6 py-16 lg:py-24 overflow-hidden">
+      <section id="about" className="w-full px-6 md:px-12 lg:px-20 py-16 lg:py-24 overflow-hidden">
         <div className="grid gap-10 lg:grid-cols-12">
 
-          {/* BIG IMAGE + HEADING SIDE */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-            className="lg:col-span-7"
-          >
-            <p className="text-lg sm:text-3xl font-bold text-[#2f6c5f] mb-2">
-              About us
-            </p>
-
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">
-              <span className="block">DESIGN</span>
-              INNOVATORS
-            </h2>
-
+          {/* BIG IMAGE SIDE */}
+          <div className="lg:col-span-7">
             {/* BIG image block */}
             <div className="mt-6 max-w-xl">
               <div className="grid grid-cols-2 grid-rows-2 gap-3 h-[320px] md:h-[360px]">
@@ -121,17 +106,23 @@ function AboutSection() {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* TEXT SIDE */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5 flex lg:items-end"
-          >
-            <div className="text-gray-800 space-y-4 text-sm sm:text-base">
+          <div className="lg:col-span-5 flex lg:items-center">
+            <motion.div
+              className="text-gray-800 space-y-4 text-sm sm:text-base"
+              variants={fadeInUp}
+            >
+              <p className="text-lg sm:text-3xl font-bold text-[#2f6c5f] mb-2">
+                About us
+              </p>
+
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+                <span className="block">DIGITAL</span>
+                MAVERICKS
+              </h2>
+
               <p>
                 Born with a vision to innovate and simplify design, we do not create design to get an &quot;Awe&quot; on the first look. We design to get an &quot;Awesome&quot; on every use.
               </p>
@@ -150,8 +141,8 @@ function AboutSection() {
                   <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#2f6c5f] transition-all duration-300 group-hover:w-full"></span>
                 </h1>
               </a>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </motion.div>
@@ -230,7 +221,7 @@ function WorkSection() {
       .then(data => {
         // limit to first 4 for the homepage layout
         const sequence = ["tall", "small", "medium", "wide"];
-        
+
         const mappedData = data.slice(0, 4).map((proj, idx) => {
           let imageUrl = "/assets/ai.jpg";
           if (proj.mainImage) {
@@ -251,7 +242,7 @@ function WorkSection() {
             variant: sequence[idx % sequence.length]
           };
         });
-        
+
         setWorks(mappedData);
       })
       .catch(err => console.error(err));
@@ -259,7 +250,7 @@ function WorkSection() {
 
   return (
     <section id="work" className="bg-[#CCE0DB] py-20">
-      <div className="max-w-6xl mx-auto px-6 md:px-0">
+      <div className="w-full px-6 md:px-12 lg:px-20">
 
         {/* HEADING */}
         <motion.div
@@ -295,7 +286,7 @@ function WorkSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-12 text-center"
+          className="mt-12 text-left"
         >
           <button onClick={() => window.location.href = '/work'} className="text-lg md:text-xl font-semibold relative group">
             View all
@@ -373,7 +364,7 @@ function ServicesSection() {
 
   return (
     <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="w-full px-6 md:px-12 lg:px-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -427,9 +418,9 @@ export default function Home() {
         <main>
           <Navbar />
           <Hero
-                        bgImage="/assets1/background.png"
-                        overlayImage="/assets1/Overlay/home.png"
-                    />
+            bgImage="/assets1/Compressed Banner/Home 1.png"
+            overlayImage="/assets1/Overlay/home.png"
+          />
           <AboutSection />
           <WorkSection />
           <ServicesSection />
